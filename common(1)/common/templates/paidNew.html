@@ -1,0 +1,67 @@
+<ion-view title="{{paidCaseTitle}}" id="page6">
+    
+    <ion-nav-buttons
+        side="left">
+        <button class="button button-icon button-clear"
+            menu-toggle="left">
+            <img src="images/menu.png" alt="" class="drawerMenuImage"/> </button>
+        <!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">
+         <div class="iconSeprator" ng-hide="true"></div>-->
+        <!-- <img class="headerIconsLeft headerIconsLeft2" ng-hide="true"
+         src="./images/back_button.png"> --> </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        
+        <figcaption  ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }" class="contHeaderFigCaption"  ng-click="closeContractModule()" >{{cancelButton}}</figcaption>
+        <img   class="headerIconsRight" ng-click="closeContractModule()" src="img/cancel.png">
+            
+    </ion-nav-buttons>
+    
+    <ion-content  scroll="false" overflow-scroll="false" class="has-header">
+        <form id="paidSearchbox" class="list" >
+            
+            
+            
+            <div style="display:inline-flex;margin-top:5px;margin-left:5px;margin-right:10px;color:white;background-color: white;border-radius: 8px;height:38px;width:97%;border: 1px solid lightgrey;">
+                <i class="icon ion-search placeholder-icon" style="padding:7px"></i>
+                <input type="submit" ng-click="Searchunpaid()" value="{{searchBtn}}" id="mytext_record" ng-class="{ 'searchTextBlack': searchTextBlack }"  style="background-color:white;border-style: none;color:none;width:83%;text-align: left;color: lightgrey">
+                    <img ng-click="clearFilter()" alt="filter"  src="./images/filter.png" class="filtercss">
+                        </div>
+            
+            
+            <div id="recordColumnHeader" style="margin-top:5px;margin-left:4px;margin-right:4px" class="bar bar-subheader bar-balanced">
+                <div style="width:22%" class = "recordheaderBarCols">{{contractId}}</div>
+                <div style="width:32%" class = "recordheaderBarCols">{{contCustName}}</div>
+                <div style="width:29%" class = "recordheaderBarCols">{{dateAssign}}</div>
+                <div style="width:17%" class = "recordheaderBarCols">{{directionText}}</div>
+                
+            </div>
+        </form>
+        
+        
+        
+    </ion-content>
+   
+    
+    <ion-content has-bouncing="true" class="contractListContainerRecord" padding="true" ng-class="{ 'recordContentTopCss': cnclButtonViet }">
+        <div class="recordRows" ng-class="{'recordListItemSelected' : selectedContractMap[$index], recordUploaded: (contract.json.recordSave || recordedList.indexOf(contract.json.contractId)!=-1)}"  class="bar bar-subheader bar-balanced" ng-repeat="paid in (paidContractList = (contractList | filter:{json :{'type': 'PAID'}}:true))"  >
+            <div style="width:22%" class = "recordListCols" data-ng-click="paidnextscreen(paid,$index)">{{paid.json.contractId}} </div>
+            <div style="width:32%" class = "recordListCols" data-ng-click="paidnextscreen(paid,$index)">{{paid.json.firstName}}</div>
+            <div style="width:29%" class = "recordListCols" data-ng-click="paidnextscreen(paid,$index)">{{paid.json.assignedDate | date:'dd-MM-yyyy' }} </div>
+            <div style="width:17%" class = "recordListCols"  ng-click="goToMap(contract)">
+                <img class="recorddirAndAttachImages" src="img/direction.png"/>
+            </div>
+        </div>
+        
+        
+        
+        
+    </ion-content>
+    
+    
+    
+</ion-view>
+
+
+
+
+

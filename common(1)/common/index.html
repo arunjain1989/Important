@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>FeCreditCollections</title>
+<!--   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"> -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<!-- 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDMMNEKPI2nBgEFS9XU4WAUi7Qsi2G1ygw&sensor=false"></script> -->
+ 		<script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAZeTwH4rLcDqC551lu35wHlde_rR4ZQFY&sensor=false"></script>
+ 		<!-- second one map key is for production --> 
+<!-- 	<script src="js/googleMapAPI.js"></script> -->
+ 
+<link href="css/loginstyle.css" rel="stylesheet">
+<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+<link href="css/ptp.css" rel="stylesheet">
+<link href="css/contractModule.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/paidUnpaid.css">
+<link rel="stylesheet" href="css/printReceipt.css">
+<link rel="stylesheet" type="text/css" href="jqueryMobile/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="jqueryMobile/jquery.datetimepicker.css">
+
+
+
+ <!--  <link href='css/androidSpecific.css' rel='stylesheet' type='text/css'> --> 
+   <link href="css/IphoneSpecific.css" rel="stylesheet" type="text/css" >   
+
+
+
+
+<!-- --
+<link href='css/windowsPhoneSpecific.css' rel='stylesheet' type='text/css'> 
+<script src="http://192.168.1.110:8080/target/target-script-min.js#anonymous"></script> 
+<!--  required for debugging windows phone -->
+
+</head>
+
+
+<body animation="slide-left-right-ios7">
+
+	<div>
+		<div id="diveId">
+
+			<ion-nav-view></ion-nav-view>
+
+		<ion-side-menu ng-class="sideMenuEnableClass" ng-show="contractSideMenuFlag" side="left" class="has-header ionSideMenuContract">
+			    <ion-content padding="true" class="side-menu-left ionContent">
+			        <ion-list class="contractSideMenuListItems">
+			            <ion-item class="item0 sideItems item-icon-left " menu-close="">
+			             <img src="img/sideBigImage.png" class="bigSideImage" />
+			             </ion-item>
+			            <ion-item ng-click="hideSidePanelOnClick(1)" class="item1 sideItems item-icon-left " id="fECREDIT-list-item14" ui-sref="#" > 
+			            <img src="img/contract_information.png" class="menu_home icon " />{{contInformation}}
+			            </ion-item>
+			            <ion-item ng-click="hideSidePanelOnClick(2)" class="item2 sideItems item-icon-left" id="fECREDIT-list-item15" ui-sref="#" > 
+			            <img src="img/customer_information.png" class="menu_home icon " />{{custInformation}}
+			            </ion-item>
+			            <ion-item ng-click="hideSidePanelOnClick(3)" class="item3 sideItems item-icon-left" id="fECREDIT-list-item16" ui-sref="#" > 
+			            <img src="img/sale_information.png" class="menu_home icon " />{{contInfoSubHeader}}
+			            </ion-item>
+			            <ion-item ng-click="hideSidePanelOnClick(4)" class="item4 sideItems item-icon-left" id="fECREDIT-list-item17" ui-sref="#" >
+			             <img src="img/information_evaluation.png" class="menu_home icon " />{{loanInfoSubHeader}}
+			            </ion-item>
+			            <ion-item ng-click="hideSidePanelOnClick(5)" class="item6 sideItems item-icon-left" id="fECREDIT-list-item19" ui-sref="#" >
+			             <img src="img/other_information.png" class="menu_home icon " />{{otherInfoSubHeader}}
+			            </ion-item>
+			        </ion-list>
+			    </ion-content>
+			</ion-side-menu>
+
+		</div>
+	</div>
+	
+	
+
+	<script src="js/windows.js"></script>
+	<!--  required to prevent crashing in windows phone -->
+	<script src="lib/ionic/js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		window.$ = window.jQuery = WLJQ;
+	</script>
+	
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/controllers.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/map.js"></script>
+	<script src="js/controllers/contractCtrl.js"></script>
+	<script src="js/controllers/showAttach.js"></script>
+	<script src="js/controllers/contractInfoCtrl.js"></script>
+	<script src="js/controllers/customerInfoCtrl.js"></script>
+	<script src="js/controllers/fECREDITCtrl.js"></script>
+	<script src="js/controllers/homeController.js"></script>
+	<script src="js/controllers/loginCtrl.js"></script>
+	<script src="js/controllers/mapCtrl.js"></script>
+	<script src="js/controllers/paidCasesCtrl.js"></script>
+	<script src="js/controllers/printRecieptCtrl.js"></script>
+	<script src="js/controllers/pTPCtrl.js"></script>
+	<script src="js/controllers/recordCtrl.js"></script>
+	<script src="js/controllers/searchCtrl.js"></script>
+	<script src="js/controllers/unpaidCasesCtrl.js"></script>
+	<script src="js/controllers/syncronazationCtrl.js"></script>
+	<script src="js/controllers/printRecieptMgtCtrl.js"></script>
+	<script src="js/controllers/notificationCtrl.js"></script>
+	<script src="js/controllers/recordUploadCtrl.js"></script>
+	<script src="js/controllers/recordDraftCtrl.js"></script>
+	<script src="js/controllers/chekHistoryCtrl.js"></script>
+	<script src="js/controllers/repossCtrl.js"></script>
+	<script src="js/controllers/terminationCtrl.js"></script>
+	<script src="js/controllers/baseSearchCtrl.js"></script>
+	<script src="js/controllers/otherInfoCtrl.js"></script>
+	<script src="js/controllers/loanInfoCtrl.js"></script>
+	<script src="js/controllers/contactInformationCtrl.js"></script>
+	<script src="js/controllers/dueInfoCtrl.js"></script>
+	<script src="js/controllers/bidderCtrl.js"></script>
+	<script src="js/controllers/paidNewScreen.js"></script>
+	<script src="js/controllers/unpaidNewScreen.js"></script>
+	 <script src="js/controllers/notificationdetails.js"></script>
+	<script src="js/controllers/unpaidNewScreen.js"></script>
+	<script src="js/controllers/pTPNewCtrl.js"></script>
+	 <script src="js/collectRepeat.js"></script>
+	<script src="js/routes.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/printReciept.js"></script>
+	<!-- <script src="js/collectionRealmChallengeHandler.js"></script> -->
+	<!-- <script type="text/javascript" src="jqueryMobile/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="jqueryMobile/jquery-ui.js"></script>
+	<script type="text/javascript"
+		src="jqueryMobile/jquery-ui.multidatespicker.js"></script>
+	<script type="text/javascript" src="jqueryMobile/jquery.js"></script>
+	<script type="text/javascript"
+		src="jqueryMobile/jquery.datetimepicker.js"></script>
+	<script type="text/javascript"
+		src="jqueryMobile/jquery.datetimepicker.full.js"></script>
+		-->
+	<script src="js/ng-cordova.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/initOptions.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/messages.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="jqueryMobile/jquery.datetimepicker.css" >
+	<script src="jqueryMobile/jquery.js"></script>
+	<script src="jqueryMobile/jquery.datetimepicker.full.js"></script>
+	<script src="jqueryMobile/jquery.canvasResize.js"></script> 
+	<script src="jqueryMobile/canvasResize.js"></script> 
+           
+</body>
+
+</html>

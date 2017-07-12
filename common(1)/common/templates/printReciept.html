@@ -1,0 +1,177 @@
+<ion-view title={{footerPR}} id="page11">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear" menu-toggle="left">
+	<img src="images/menu.png" alt="" class="drawerMenuImage"/> </button>
+        <!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">-->
+        <div class="iconSeprator"></div>
+        <img class="headerIconsLeft headerIconsLeft2" src="./images/back_button.png"> </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <figcaption  class="contHeaderFigCaption"  ng-click="closeContractModule()" >{{cancelButton}}</figcaption>
+                 <img   class="headerIconsRight" ng-click="closeContractModule()" src="img/cancel.png">
+               
+    </ion-nav-buttons>
+
+    <div  align="center" id="contDetailSubHeader" class="bar bar-subheader bar-balanced" style="height: 45px;padding: 0px; ">
+
+
+        <div align="center" style="display:inline-flex;margin-left:5%;margin-top: 5px">
+            <div  ng-click ="showHistory()">
+
+                <div>
+                    <img class="bottomTabImages" src="images/open.png" style="width: 18px;height:15px" />
+                </div>
+                <span>Show History</span>
+            </div>
+
+            <div>
+                <div>
+                    <img class="bottomTabImages" src="images/save.png" style="width: 18px;height:15px;margin-left:40px" />
+                </div>
+                <span style=" margin-left:37px">{{saveButton}}</span>
+            </div>
+            <div>
+
+                <div>
+                    <img class="bottomTabImages" src="images/print.png" style="width: 18px;height:15px;margin-left:40px" />
+                </div>
+                <span style="margin-left:37px">{{print}}</span>
+            </div>
+
+            <div>
+
+                <div>
+                    <img class="bottomTabImages" src="images/reprint.png" style="width: 18px;height:15px;margin-left:40px" />
+                </div>
+                <span style=" margin-left:35px">{{reprint}}</span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <ion-content scroll="false" padding="true" class="has-header">
+
+        <form id="paidSearchbox" class="list" style="margin-top:13%">
+            <label class="item item-input" style="border-radius: 8px;height:40px"> 
+            <i class="icon ion-search placeholder-icon"></i>
+				<input type="submit" ng-click="Searchcontract()"  value={{searchContract}} style="border-style: none;color: lightgray;text-align: left;">
+                <img alt="filter" src="./images/filter.png" style="float: right;width: 20px;height: 20px;margin-right: 2%;">
+	</label>
+
+        </form>
+
+
+    </ion-content>
+    <ion-content  class="has-header printRecContent" padding="true">
+    
+    
+     <div id="listContract" style="visibility: hidden;">
+
+    <ion-content style="margin-top:20px; overflow:auto;" scroll="false" padding="true">
+   
+   <div  style="height: 40px;width:100%;padding: none;background-color: #54B847;
+   text-align: center;display: inline-flex;color: #ffffff; ">
+	          <div style="width:22%" class = "headerBarCols">{{customerId}} </div>
+             <div style="width:32%" class = "headerBarCols">{{contCustName}}</div>
+             <div style="width:29%" class = "headerBarCols">{{dateAssign}}</div>
+             <div style="width:17%" class = "headerBarCols">{{directionText}}</div>
+                
+	 </div> 
+  
+	<div class="contractRows" class="bar bar-subheader bar-balanced" ng-click="selectContractListItems($index)"  ng-repeat="contract in contractList">
+	<div style="width:22%; border-left:1px solid lightgrey;" class = "contactListCols" ng-class="{contListChecked : contract.selected}"  >{{contract.json.custId}}</div>
+	 <div style="width:32%; border-left:1px solid lightgrey;" class = "contactListCols">{{contract.json.firstName}}</div>
+	<div style="width:29%; border-left:1px solid lightgrey;" class = "contactListCols">{{contract.json.assignedDate | date:'dd/MM/yyyy'}}</div>
+	 <div style=" width:17%; border-left:1px solid lightgrey;" class = "contactListCols">
+	 <img class="dirAndAttachImages" src="img/direction.png" />
+	 </div>    
+	</div>
+   </ion-content>
+   
+ </div> 
+    
+    
+    
+        <div  id="printRecieptForm" class="card">
+			
+           
+                <div style="display:inline-flex;">
+                    <img class="print-logo" src="./images/small_logo.png"> <span style="margin-left: 10px;padding-top:15px;font-size: 15pt">Receipt Form</span>
+                </div>
+                <p style="background-color: green; height: 10px;"></p>
+           
+         
+            <div class="row" class="firstRowPrintReceipt" style="margin-top:-2%">
+                <div class="col col-75 left" style="color: #008345">{{eseriesNo}}
+                </div>
+                <div class="col col-50 right" style="color: #008345">d123456</div>
+            </div>
+            <div class="row">
+                <div class="col col-75 left" style="color: #008345">{{FCName}}</div>
+                <div class="col col-50 right" style="color: #008345">d123456</div>
+            </div>
+            <div class="row">
+                <div class="col col-75 left" style="color: #008345">{{FCCode}}</div>
+                <div class="col col-50 right" style="color: #008345">d123456</div>
+            </div>
+            <div class="row">
+                <div class="col col-75 left" style="color: #008345">{{date}}</div>
+                <div class="col col-50 right" style="color: #008345">d123456</div>
+            </div>
+            <div class="row">
+                <div class="col col-75 left" style="color: #008345">{{contractId}}</div>
+                <div class="col col-50 right" style="color: #008345">d123456</div>
+            </div>
+            <div class="row">
+                <div class="col col-75 left" style="color: #008345">{{contractOwner}}
+                </div>
+                <div class="col col-50 right" style="color: #008345">d123456</div>
+            </div>
+            <div class="row">
+                <div class="col col-75 left" style="color: #008345">{{currentAdress}}
+                </div>
+                <div class="col col-50 right" style="color: #008345">d123456</div>
+            </div>
+
+
+            <p style="background-color: #DCDCDC; width: 100%; height: 1px;"></p>
+
+            <div class="row">
+                <div class="col col-60 left">{{depositorName}}</div>
+                <div class="col col-80 right">
+                    <input type="text" style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-60 left">{{relationshipWithContract}}</div>
+                <div class="col col-80 right">
+                    <input type="text" style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-60 left">{{amountInNumbers}}</div>
+                <div class="col col-80 right">
+                    <input type="text" style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-60 left">{{amountInWords}}</div>
+                <div class="col col-80 right">
+                    <input type="text" style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-120 left">{{remark}}</div>
+            </div>
+            <div class="row">
+                <div class="col col-120 left">
+                    <input type="text" style="width: 100%; height: 40px; border: 5px solid green; border-width: 1px;">
+                </div>
+            </div>
+
+</div>
+    </ion-content>
+</ion-view>

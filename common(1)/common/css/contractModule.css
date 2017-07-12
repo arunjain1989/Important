@@ -1,0 +1,711 @@
+/* Empty. Add your own CSS if you like */
+@
+-ms-viewport {
+	width: device-width;
+}
+
+.previousLinkCt {
+	height: 30px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 5px;
+	color: #008345;
+}
+
+.nextLinkCt {
+	margin-left: 82%;
+	height: 30px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 5px;
+	color: #008345;
+}
+
+.contractView {
+	background-color: #F6F6F6;
+}
+
+.headerIconsLeft {
+	width: 13px;
+	height: 22px;
+	float: left;
+	margin-top: 7px;
+	margin-left: 5px;
+}
+
+.menuIcon {
+	width: 25px;
+}
+
+.iconSeprator {
+	width: 1px;
+	height: 25px;
+	border-right: 1px solid #ffffff;
+	float: left;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.headerIconsLeft2 {
+	margin-left: 10px;
+}
+
+.headerIconsRight {
+	width: 21px !important;
+	height: 21px !important;
+	float: right !important;
+	margin-top: 2px !important;
+	/* margin-right: 10px; */
+}
+
+.headerIconsRight:active {
+	transform: translateY(1px);
+	opacity: 0.7;
+}
+
+.headerIconsRight1 {
+	margin-right: 15px;
+	width: 23px !important;
+}
+
+.contHeaderFigCaption {
+	font-size: 11px;
+	margin-top: 30px;
+	line-height: 0px !important;
+	float: right;
+	margin-right: -25px;
+	color: #ffffff;
+}
+
+.contHeaderFigCaptionNew {
+	font-size: 10px;
+	margin-top: 30px;
+	line-height: 0px !important;
+	float: right;
+	margin-right: -24px;
+	color: #ffffff;
+}
+
+.contHeaderFigCaption:active {
+	transform: translateY(1px);
+	opacity: 0.7;
+}
+
+.contNavBar .bar .buttons-right span {
+	display: inline-block;
+}
+
+.contHeaderNav .title {
+	/* left: 15px; */
+	right: 0px;
+}
+
+title.title-left.header-item {
+	left: 100px !important;
+	right: 0px !important;
+}
+
+.searchAndSelectBox {
+	margin-top: 15%;
+	height: 25%;
+	padding: 0px !important;
+	background-color: #F6F6F6;
+}
+
+.searchIonContent {
+	border: 1px solid red;
+	position: relative;
+}
+
+/* custom search box not ionic below*/
+.searchContainerDiv {
+	height: 30%;
+	width: 94%;
+	display: inline-flex;
+	margin: 2% 3%;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px #595959;
+	background-color: #ffffff;
+}
+
+.searchIconDiv {
+	height: 64%;
+	/*  border: 1px solid; */
+	width: 8%;
+	margin-left: 33%;
+	margin-top: 2%;
+}
+
+.searchIconImage {
+	width: 100%;
+	height: 100%;
+}
+
+.searchText {
+	/*   border: 1px solid; */
+	height: 50%;
+	margin: 2% 0 0 4%;
+}
+/* custom search box not ionic above*/
+#contractSearchbox {
+	height: 100% !important;
+	padding: 1% 2%;
+}
+
+#contractSearchbox .item-input {
+	padding: 0px 0 0px 15px;
+	border-radius: 6px;
+	height: 100% !important;
+}
+
+#contractSearchbox .placeholder-icon:first-child {
+	/*    padding-right: 20px;
+    width: 25px !important; */
+	
+}
+
+.searchBoxDiv {
+	width: 100%;
+	height: 28%;
+	margin-top: 2%;
+}
+
+.selectAllBar {
+	width: 100%;
+	margin-top: 1%;
+	background-color: #58585B !important;
+	display: inline-flex;
+	height: 30%;
+}
+
+.contColumnHeader {
+	border: none !important;
+	background-color: #54B847;
+	text-align: center;
+	height: 28%;
+	width: 99%;
+	display: inline-flex;
+	padding: 0px;
+	margin: 3% 0.5%;
+	color: #ffffff;
+}
+
+.selectAllOpenFirst>label>div:last-child {
+	margin: -12% 0 0 -15%
+}
+
+.selectAllOpenFirst>label {
+	border: none;
+}
+
+.selectAllOpenFirst {
+	display: inline-flex;
+	width: 70%;
+}
+
+.selectAllOpenSecond {
+	width: 30%;
+}
+
+#selectAllCheckBox.item-checkbox {
+	background-color: #58585B !important;
+	color: #ffffff;
+	height: 90%;
+	width: 140px;
+	top: 2px;
+	left: 0px;
+}
+
+.openButton {
+	width: 55%;
+	color: #008345 !important;
+	height: 54%;
+	background-color: #ffffff !important;
+	line-height: 0px !important;
+	font-size: 12px !important;
+	min-height: 20px !important;
+	margin: 9% 0 0 25% !important;
+}
+
+.openButton:active {
+	transform: translateY(1px);
+	opacity: 0.7;
+}
+
+.contractCheckBox {
+	height: 30px !important;
+	border: none !important;
+}
+
+.contractCheckBox.item-checkbox {
+	padding: 30px 0 0px 60px;
+	left: -12px;
+}
+
+.contractCheckBox>div:last-child {
+	margin: -25px 0 0 -3%;
+}
+
+.headerBarCols {
+	padding: 5px 0;
+	font-size: 11px;
+}
+
+.contractListContainer {
+	background-color: #F6F6F6;
+	/*  background-color:cyan; */
+	/* if not use outer container div  -- can be diff in android/ios */
+	min-height: 50%;
+	height: auto;
+	width: 100%;
+	margin-bottom: 5px;
+	/* display:inline-flex; */
+}
+
+.contractListContainer .scroll {
+	border-top: 1px solid lightgrey !important;
+	border-left: 1px solid lightgrey !important;
+	margin: 1%;
+	padding: 0;
+	width: 98%;
+	height: auto;
+	/*  box-shadow: 0 0 1px #888888; */
+}
+/*
+.contractListContainer .contractList .item{
+    border:none !important;
+    margin-left: 10%;
+    padding:5px;
+    color: #959595;
+}
+.contractListContainer .card{
+   margin:0px 0px 10px 0px ;
+}
+*/
+.contractMainIonContent {
+	position: relative;
+	top: 0px !important;
+}
+
+.contractMainIonContent .scroll {
+	
+}
+
+.contractRows {
+	border-bottom: 1px solid lightgrey;
+	text-align: center;
+	/*  height: 30px; 
+    position: initial;*/
+	width: 100%;
+	display: inline-flex;
+	padding: 0px;
+}
+
+.contListChecked {
+	color: #2979FF;
+}
+
+.contactListCols {
+	padding: 5px 2px;
+	font-size: 11px;
+	border-right: 1px solid lightgrey;
+}
+
+.contactListLastCol {
+	padding: 5px 2px;
+	font-size: 11px;
+}
+
+/*    contract page 2 */
+#contDetailSubHeader {
+	border: none !important;
+	background-color: #54B847;
+	text-align: left;
+	height: 30px;
+}
+
+#contDetailSubHeaderNew {
+	border: none !important;
+	background-color: #54B847;
+	text-align: left;
+	height: 30px;
+	display: flex !important;
+}
+
+#contDetailSubHeaderNew h2 {
+	text-align: left;
+	padding: 14px 0px 0px 5px;
+	font-weight: normal;
+	font-size: 16px;
+	height: 100%;
+	line-height: 0px;
+}
+
+#contDetailSubHeader h2 {
+	text-align: left;
+	padding: 14px 0px 0px 5px;
+	font-weight: normal;
+	font-size: 16px;
+	height: 100%;
+	line-height: 0px;
+}
+
+.contractInfoCard {
+	top: 8%;
+	bottom: 16%;
+	/* border-bottom: 1px solid red; */
+}
+
+.contractInfoCard .contractInfoItems .item {
+	border: none !important;
+	margin-left: 9%;
+	padding: 10px;
+	color: #333333;
+}
+
+.contractInfoCard .scroll {
+	padding: 5px;
+}
+
+.contractInfoCard .left {
+	margin-left: 2%;
+	padding-top: 8px;
+}
+
+.contractInfoCard .right {
+	padding-top: 10px;
+	padding-right: 7%;
+	color: #008345;
+	text-align: right;
+}
+
+.dirAndAttachImages {
+	width: 25px;
+	height: 22px;
+	margin-right: 10%;
+}
+
+.callButtonIcon {
+	width: 20px;
+	height: 25px;
+	border-left: 3px solid #54B847;
+	padding-left: 4px;
+}
+
+.callButtonNum {
+	color: #008345; /*height:25px;*/
+	float: right; /* border-right: 3px solid #54B847;*/
+	padding-right: 4px;
+	margin-right: 4px;
+}
+
+.ptpCallButtonNum {
+	color: #008345; /*height:25px;*/
+	float: left; /*border-right: 3px solid #54B847;*/
+	padding-right: 4px;
+	margin-right: 4px;
+}
+
+.checkInPopUp {
+	width: 100px;
+	height: 75px;
+	box-shadow: 0 0 2px #888888;
+	position: absolute;
+	margin-left: 11%;
+	background-color: #fff;
+	color: #008345;
+	text-align: center;
+}
+
+.checkInPopUp .list {
+	margin-left: 20px;
+}
+/*   footer tabs   */
+.footerTabBar {
+	border: none !important;
+	background-color: #008345 !important;
+	padding: 0;
+	height: 50px;
+}
+
+.footerTabBar .buttons {
+	width: 34%;
+	border-right: 1px solid #ffffff;
+	height: 100%;
+}
+
+.footerTabBar .button {
+	background-color: #008345 !important;
+	width: 100%;
+	font-size: 10px;
+}
+
+.bottomTabImages {
+	width: 22px;
+	height: 22px;
+	margin-top: 0px;
+}
+
+.footerTabBar figcaption {
+	margin-top: -10px;
+	line-height: 10px !important;
+}
+/*   footer tabs   */
+.infoEvalCard {
+	top: 18%;
+}
+
+.customerProfilePic {
+	width: 55px;
+	height: 55px;
+	/*   border:1px solid red;*/
+}
+
+.xx {
+	margin-top: 15px;
+}
+
+.customerProfilePicContainer {
+	/*    border:1px solid red;*/
+	height: 55px;
+	overflow: hidden;
+	padding: 0;
+	margin-left: 5%;
+}
+
+.nextLink {
+	position: absolute;
+	bottom: 13%;
+	margin-left: 82%;
+	height: 22px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 5px;
+	color: #008345;
+}
+
+.contPrevLink {
+	position: absolute;
+	bottom: 13%;
+	margin-left: 5%;
+	height: 22px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 5px;
+	color: #008345;
+}
+
+.prevLinkInInfo {
+	position: absolute;
+	bottom: 7%;
+	margin-left: 77%;
+	height: 30px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 5px;
+	color: #008345;
+}
+
+.prevLinkInInfo:active {
+	transform: translateY(1px);
+	opacity: 0.7;
+}
+
+.contPrevLink:active {
+	transform: translateY(1px);
+	opacity: 0.7;
+}
+
+.nextLink:active {
+	transform: translateY(1px);
+	opacity: 0.7;
+}
+
+/* ionic side panel 2 */
+.ionSideMenuContract {
+	display: none;
+	top: 44px;
+	bottom: 0px;
+	z-index: 3;
+	transition: all linear 0.25s;
+	/*border-top: 1px solid #666666;*/
+}
+
+.sideMenuShown {
+	display: block;
+}
+
+.ionSideMenuContract .padding {
+	padding: 0px !important;
+}
+
+.ionContent {
+	top: 0px;
+	background-color: #7FC1A2;
+}
+
+/*.ionSideMenuContract */
+.ng-hide {
+	height: 100;
+	width: 0;
+	background-color: #ffffff;
+	left: -200px;
+	bottom: 0px;
+}
+
+.bigSideImage {
+	height: 120px;
+	width: 100%;
+	margin-bottom: -5px;
+}
+
+.sideItems {
+	border: none !important;
+	box-shadow: 0px 1px 10px #595959;
+	padding: 0 !important;
+}
+
+.item0 a {
+	padding: 0 !important;
+}
+
+.item1 a {
+	background-color: #008345 !important;
+	color: #ffffff;
+}
+
+.item2 a {
+	background-color: #198F57 !important;
+	color: #ffffff;
+}
+
+.item3 a {
+	background-color: #339C6A !important;
+	color: #ffffff;
+}
+
+.item4 a {
+	background-color: #4CA87C !important;
+	color: #ffffff;
+}
+
+.item5 a {
+	background-color: #66B58F !important;
+	color: #ffffff;
+}
+
+.item6 a {
+	background-color: #7FC1A2 !important;
+	color: #ffffff;
+}
+/* side menu above */
+.seeDetailBtn {
+	font-weight: normal;
+	text-align: center;
+	position: absolute;
+	bottom: 20px;
+	width: 34%;
+	border-radius: 5px 5px 0 0;
+	left: 33%;
+	padding: 5px;
+	color: #ffffff;
+	background-color: #008345;
+	border: 1px solid #008345;
+}
+
+.contractTermination {
+	text-align: center;
+	width: 80px;
+	margin-left: 50px;
+}
+
+.item-icon-left .item-content:active {
+	color: green !important;
+	/*background-color:#eeeeee !important;*/
+}
+
+.footerLastButton {
+	border: none !important;
+}
+
+.recordBackDiv {
+	width: 50px;
+	/* border:1px solid #ffffff; */
+}
+
+.checkInCSS {
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #008345;
+	color: white;
+	width: 30%;
+	height: 30px;
+	margin-top: 5px
+}
+
+.checkInCSS:active {
+	transform: translateY(1px);
+	opacity: 0.7;
+}
+
+.noUnderlineSyncTitle h5 {
+	text-decoration: none !important;
+}
+
+.addressPrompt {
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 22%;
+	background-color: #ffffff;
+	box-shadow: 0 0 8px #888;
+	border-radius: 2px;
+	z-index: 9999;
+	width: 80%;
+	left: 10%;
+	padding: 10px;
+	display: none;
+}
+
+.addressPrompt .tArea {
+	border: 1px solid #47ad37;
+	width: 100%;
+}
+
+.addressPrompt h6 {
+	font-size: 14px;
+	font-weight: normal;
+	margin-top: 5%;
+}
+
+.addressPrompt .btn {
+	
+}
+
+.addressPrompt .btns {
+	float: left;
+	width: 33%;
+	color: #008345;
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 3%;
+	height: 30px;
+	line-height: 30px;
+	font-weight: 500;
+}
+
+.checkInCSSHistory {
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #008345;
+	color: white;
+	width: 40%;
+	height: 30px;
+	margin-top: 5px
+}

@@ -1,0 +1,78 @@
+<ion-view title="Status" id="page29">
+     <ion-nav-bar class="bar-stable contNavBar" style="text-align:center">
+           
+            <ion-nav-buttons side="left">
+              <img class="headerIconsLeft" src="img/back_button.png">
+              <!-- <img class="headerIconsLeft menuIcon" src="img/menu.png"> -->
+                <div class="iconSeprator"></div>
+                  <img class="headerIconsLeft headerIconsLeft2"  src="img/next_button.png">
+            </ion-nav-buttons>
+            
+         <ion-nav-buttons side="right">
+                 <img ng-click="closeContractModule()" class="headerIconsRight"  src="img/cancel.png">
+                <figcaption  class="contHeaderFigCaption"> Cancel</figcaption>
+             
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        
+
+   <ion-content  padding="true" style="margin-top:5px">
+    
+     <div  class="card">
+           
+
+            <div class = "row">
+                <div class = "col col-60 left">ContractID</div>
+                <div class = "col col-80 right" style="text-align:center; padding-right: 70px">FE1309</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-60 left">Requested Date</div>
+                <div class = "col col-80 right" style="text-align:center; padding-right: 70px">Chung</div>
+            </div>
+              <div class = "row">
+                <div class = "col col-60 left">Status</div>
+                 <div class = "col col-80 right" style="text-align:center; padding-right: 60px" >RDA</div>
+            </div>
+            
+    <div class = "row">
+      <div class = "col col-60 left">Change Status</div>
+   
+       <div id="conwithchangeValue" style="width: 100px; height: 20px; border-radius :5px;
+         background-color:#008345;color:#ffffff; padding-left: 12px">
+         Status</div>
+		
+      <div>
+       <img  class="downArrow"  src="./images/down_arrow.png"  style="position:fixed;
+      margin-left:-14px;margin-top:1px;width: 12px;padding-top:4px; height: 15px;">
+     </div>
+     </div>
+     
+    
+     
+      <div  class="card" style="width: 55%;margin-left:110px;margin-top: -9px;position: absolute">
+        <div class = "row">
+                <p style="font-size: small;font-weight: normal;">CTDA:</p>
+                <p style="font-size: x-small;font-weight: normal;padding-left: 10px">Contract Termination Document Attach</p>
+                
+               
+            </div>
+            <div class = "row">
+                <p style="font-size: small;font-weight: normal;margin-top: -8px">CDDS:</p>
+                <p style="font-size: x-small;font-weight: normal;padding-left:10px;margin-top: -8px">Repossession Cash Deposit Attach</p>
+            </div>
+            
+      </div>
+         
+     <div class = "row">
+       <div class = "col col-60 left">Attach</div>
+       <img style="margin-left:75px; width:25px; height:22px;"  id="attachcash" src="./images/attachment_icon.png" />
+      </div>   
+            
+    </ion-list>           
+        </div>
+        
+</ion-content>
+    
+    
+    
+</ion-view>

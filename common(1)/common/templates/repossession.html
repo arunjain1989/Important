@@ -1,0 +1,278 @@
+<ion-view title={{footerRepos}} id="page23">
+
+
+	<ion-nav-buttons
+			side="left">
+		<button class="button button-icon button-clear"
+				menu-toggle="left">
+			<img src="images/menu.png" alt="" class="drawerMenuImage"/> </button>
+		<!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">-->
+	</ion-nav-buttons>
+	<!-- <img class="headerIconsLeft menuIcon" src="img/menu.png"> -->
+	<!-- <div class="iconSeprator"></div>
+    <img class="headerIconsLeft headerIconsLeft2"
+     src="./images/back_button.png"> --> </ion-nav-buttons>
+
+
+
+	<!-- <ion-nav-buttons side="right">
+     <img  class="printheaderIconsRight"
+     src="./images/other_information.png">
+    <figcaption class="printHeaderFigCaption">Info</figcaption>  -->
+
+
+	<!-- <ion-nav-buttons side="left">
+   <img class="headerIconsLeft menuIcon" src="img/menu.png"> </ion-nav-buttons> -->
+
+
+	<!-- <ion-nav-buttons side="left">
+    <img class="headerIconsLeft headerIconsLeft2"
+     src="./images/back_button.png"> </ion-nav-buttons> -->
+
+
+
+	<ion-nav-buttons side="right">
+		<!--  <figure id="cancelRepossession">
+                 <img  class="headerIconsRight headerIconsRight1" ng-click="clearRepossession()"  src="img/clear.png">
+                     <figcaption class="contHeaderFigCaption">Cancel Termination</figcaption>
+                     </figure> -->
+		<figcaption  class="contHeaderFigCaption"  ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }" ng-click="closeRepossessionModule()" >{{cancelButton}}</figcaption>
+		<img   class="headerIconsRight" ng-click="closeRepossessionModule()" src="img/cancel.png">
+
+	</ion-nav-buttons>
+
+
+	<ion-content  scroll="false"  class="has-header">
+		<form id="paidSearchbox" class="list">
+
+			<div id="searchID" style="display:inline-flex;margin-top:5px;margin-left:5px;margin-right:10px;color:white;background-color: white;border-radius: 8px;height:38px;width:97%;border: 1px solid lightgrey;">
+				<i class="icon ion-search placeholder-icon" ng-click="baseSearchcontract()" style="padding:7px"></i>
+				<input type="submit" ng-click="Searchunpaid()" value="{{searchBtn}}" id="mytext_reposs" ng-class="{ 'searchTextBlack': searchTextBlack }"  style="background-color:white;border-style: none;color:none;width:83%;text-align: left;color: lightgrey">
+				<img ng-click="clearFilter()" alt="filter"  src="./images/filter.png" class="filtercss">
+
+
+			</div>
+
+			<div class="contColumnHeader termColumnHeader" id="listContractHeader" style="visibility: hidden;">
+				<div style="width:27%" class="recordheaderBarCols">{{contractId}}</div>
+				<div style="width:38%" class="recordheaderBarCols">{{contCustName}}</div>
+				<div style="width:35%" class="recordheaderBarCols">{{dateAssign}} </div>
+
+
+			</div>
+		</form>
+	</ion-content>
+
+	<div id="listContract" style="visibility: hidden;">
+
+		<ion-content  class="contractListContainerRecord" >
+
+
+			<div class="contractRows" class="bar bar-subheader bar-balanced" ng-click="selectContractListItems($index)"  ng-repeat="contract in contractList" ng-show="contract.json.product == 'FC_CDL' || contract.json.product == 'FC_TW'  " >
+				<div style="width:27%;" class = "recordListCols" data-ng-click="goToContractDetail(contract)">{{contract.json.contractId}} </div>
+				<div style="width:38%;" class = "recordListCols" data-ng-click="goToContractDetail(contract)">{{contract.json.firstName}}</div>
+				<div style="width:35%;" class = "recordListCols" data-ng-click="goToContractDetail(contract)">{{contract.json.assignedDate | date:'dd-MM-yyyy'}} </div>
+			</div>
+		</ion-content>
+
+	</div>
+
+	<div id="repossessionForm" style="visibility: hidden;">
+
+		<ion-content  padding="true"  style="margin-top: -2%;" class="repoContentScroll" >
+			<div id="bidderImage" style="display: none;" class="row">
+
+				<div class="bidderImg"  ng-click="addBidder()"  >
+					<p >{{addbidderButton}}</p>
+				</div>
+				<div class="viewBidderImg" id="viewbidder" ng-click="viewBidder()" style="display: none;" >
+					<p>{{viewBidderButton}}</p>
+				</div>
+
+			</div>
+
+			<div id="statusView" style="display: none; border: solid 0px;background-color: #47ad37; display: inline-flex; border-radius: 10px;margin-bottom: 2px;padding-bottom: 0px;padding-right:0px;" class="row" >
+				<span style="height: 100%; width: auto;white-space: nowrap;color: white;margin-left:2%" >{{statusTitle}} : </span>
+
+				<span  id="approvedView" style="color: white;padding-left: 5px;display: none;padding-right: 10px;">{{approvedViewValue}}</span>
+			</div>
+
+
+
+			<div  class="card" id="formID" style="margin-top:2% !important;">
+
+				<div class="row">
+					<div class="col col-60 left">{{fcName}}</div>
+					<div class="col col-70 right" style="color: #008345">{{fcNameRepossession}}</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col col-60 left">{{fcCode}}</div>
+					<div class="col col-70 right" style="color: #008345">{{fcCodeRepossession}}</div>
+				</div>
+
+				<div class="row">
+					<div class="col col-60 left" >{{contractId}}</div>
+					<div class="col col-70 right" style="color: #008345">{{indicesRepossLocal.json.contractId}}</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col col-60 left" >{{contCustName}}</div>
+					<div class="col col-70 right" style="color: #008345">{{indicesRepossLocal.json.firstName}}</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col col-60 left" >{{repossessionAddress}}</div>
+					<div class="col col-80 right">
+						<input  type="text" id="reposs_address"
+								style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col col-60 left" >{{customerPhone}}</div>
+					<div class="col col-80 right">
+						<input type="tel" id="reposs_cust_phone" maxlength="12" ng-keyup="phoneNumericOnly('reposs_cust_phone')"
+							   style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col col-60 left" >{{brand}}</div>
+					<div class="col col-80 right" style="color: #008345">{{indicesRepossLocal.json.brand}}</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col col-60 left" >{{loanAmount}}</div>
+					<div class="col col-80 right" style="color: #008345">{{indicesRepossLocal.json.loanAmount}}</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col col-60 left" >{{paidAmount}}</div>
+					<div class="col col-80 right" style="color: #008345">{{indicesRepossLocal.json.totalPaidAmount}}</div>
+				</div>
+
+				<div class="row">
+					<div class="col col-60 left" >{{pricipalOutstanding}}</div>
+					<div class="col col-80 right" style="color: #008345">{{indicesRepossLocal.json.posAmt}}</div>
+				</div>
+
+				<div class="row">
+					<div class="col col-60 left" >{{loanDpd}}</div>
+					<div class="col col-80 right" style="color: #008345">{{indicesRepossLocal.json.dpd}}</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col col-60 left">{{assetCondition}}</div>
+					<div class="col col-80 right">
+						<input type="text" id="reposs_asstsCondition"
+							   style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-60 left">{{financialConditionAssessment}}</div>
+					<div class="col col-80 right">
+						<input type="text" id="reposs_financial_assets"
+							   style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col col-60 left">{{otherSuggestion}}</div>
+					<div class="col col-80 right">
+						<input type="text" id="reposs_other_suggestion"
+							   style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col col-60 left">{{curruntDateRepos}}</div>
+					<div class="col col-80 right" id="reposs_curruntDate" style="color: #008345">{{ myCurrDate | date:'dd-MM-yyyy H:mm'}}</div>
+				</div>
+
+<!-- 
+				<div class="row">
+					<div class="col col-60 left">{{repossCustName}}</div>
+					<div class="col col-80 right">
+						<input type="text" id="reposs_cust_name"
+							   style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+					</div>
+				</div>
+				<div class="row" >
+
+					<div class="col col-60 left">{{reposAprovalForm}}</div>
+					<div class="col col-80 right">
+						<input type="text" id="reposs_approval"
+							   style="width: 110px; height: 20px; border: 5px solid green; border-width: 1px;">
+					</div>
+				</div> -->
+			</div>
+			<div id="attachAndCheckInDiv" style="height:32px">
+
+				<div class="repos_attachCheckInImg"  style="display: none;" ng-click="chekInReposs()" >
+					<p>{{checkInButton}}</p>
+				</div>
+
+				<div id="attachmentHide" class="repos_attachImg attachCheckInImg" ng-click="attachFileReposs()">
+					<p>{{attachFileButton}}</p>
+				</div>
+
+			</div>
+
+
+
+			<ul id="addvalueRepos">
+
+
+
+			</ul>
+
+
+
+			<div class="addrType" style="height:30px;background-color: #47ad37;display: none; margin-left: 6px;margin-right: 8px" ng-click="addresstypeclickBidder()" >
+				<label class="advanceheaderview">{{addressType}}</label>
+				<img src ="./images/dropdownwhite.png"  style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;"/>
+			</div>
+			<div style="display: none;">
+				<ul class="addrTypeUl" style="background-color: white;margin-left: 10px;margin-right: 10px" ng-hide="addressdropdownviewBidder">
+					<li ng-click="addressFunction(data,$event,$index)" ng-attr-id="addrTypeLi{{$index}}" class="advancels" ng-repeat="data in addressTypeList">{{data.custAddr}}</li>
+
+				</ul>
+
+			</div>
+
+			<div class="distanceDiv" style="display: none;">
+				<div class="distanceText" >{{distance}}:</div>
+				<div class="distanceInput" > <span  id="distanceReposs" ></span></div>
+			</div>
+
+			<div id="cancelRepoMsgDiv" style="color:green;display:none;" >{{cancelRepoMsg}}</div>
+			<center>  <button class="addrType checkInCSS" id="button_save" ng-click="saveRepossionButton()"style="margin-bottom: 25px; margin-top: 10px" >{{saveButton}}</button> </center>
+			<center>  <button class="addrType checkInCSS" id="button_repos" ng-click="clearRepossession()"style="margin-bottom: 25px;margin-top: 10px" >{{cancelButton}}</button> </center>
+
+			<!-- <button class="button"  style="background-color: #008345;margin:auto;color:#ffffff;
+            display:block;width:100px;height:15px;margin-bottom:5px">Save</button> -->
+
+		</ion-content>
+		
+		<div class="addressPrompt" id="addrPromptPopUpRepos">
+	<h4>{{unableFindAddr}}</h4>
+	<h6>{{addrPromptMsgOnline}}</h6>
+	<textarea  rows="4" class="tArea" id="addrTextAreaRepos" ></textarea>
+	<div class="btn">
+		<div class="btns" ng-click="onAddrPromptRepos(2)" >{{cancelButton}}</div>
+		<div class="btns" ng-click="onAddrPromptRepos(1)" >{{proceedBtn}}</div>
+		<div class="btns" ng-click="onAddrPromptRepos(3)" >{{searchBtn}}</div>
+	</div>
+</div>
+
+	</div>
+
+</ion-view>

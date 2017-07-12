@@ -1,0 +1,280 @@
+<ion-view title="{{contDetailTitle}}" id="page2">
+     <ion-nav-bar class="bar-stable contNavBar" >
+           
+            <ion-nav-buttons side="left" >
+                <img class="headerIconsLeft" src="img/back_button.png" ng-click="nextdetail(-1)" ng-hide="hidePreviousInDetail"> 
+<!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">-->
+                <div class="iconSeprator" ng-hide="hidePreviousInDetail"></div>
+                  <img class="headerIconsLeft headerIconsLeft2"  src="img/next_button.png" ng-click="nextdetail(1)" ng-hide="hideNextInDetail">
+            </ion-nav-buttons>
+         <ion-nav-buttons side="right">
+             <img ng-click="closeContractSidePanel()" class="headerIconsRight" src="img/cancel.png">
+             <figcaption ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }"   class="contHeaderFigCaptionNew"> {{cancelButton}}</figcaption>
+             <img ng-click="toggleContractSidePanel()" class="headerIconsRight headerIconsRight1" src="img/contract_menu.png">
+             <figcaption  class="contHeaderFigCaptionNew">{{moreButton}}</figcaption>
+         </ion-nav-buttons>
+        </ion-nav-bar>
+    <div id="contDetailSubHeaderNew" class="bar bar-subheader bar-balanced"  ng-model="index">
+        <h2 class="title">{{contInfoSubHeader}}</h2>
+    </div>
+    <ion-content  padding="true" class="contractInfoCard">
+        <div  class="card">
+            <ion-list class="contractInfoItems">
+
+            <div class = "row">
+                <div class = "col col-50 left">{{contInfoMobile}}</div>
+                <div  class = "col col-50">
+                
+               		 <a ng-show="contractList[localSelectedArray[index]].json.mobilePhone.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.mobilePhone}}">
+                  		<div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                  	<div class="callButtonNum">{{contractList[localSelectedArray[index]].json.mobilePhone}}</div>
+                </a>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col col-50 left">{{regPhone}}</div>
+
+
+                <div  class = "col col-50">
+
+                    <a ng-show="contractList[localSelectedArray[index]].json.mobilePhone.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.mobilePhone}}">
+                        <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                        <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.mobilePhone}}</div>
+                    </a>
+                </div>
+
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{spouseNum}}</div>
+
+
+                  <div  class = "col col-50">
+
+                      <a ng-show="contractList[localSelectedArray[index]].json.spousePhoneNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.spousePhoneNo}}">
+                          <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                          <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.spousePhoneNo}}</div>
+                      </a>
+                  </div>
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{motherNum}}</div>
+
+
+
+                  <div  class = "col col-50">
+
+                      <a ng-show="contractList[localSelectedArray[index]].json.motherNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.motherNo}}">
+                          <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                          <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.motherNo}}</div>
+                      </a>
+                  </div>
+
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{fatherNum}}</div>
+
+
+
+                  <div  class = "col col-50">
+
+                      <a ng-show="contractList[localSelectedArray[index]].json.fatherNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.fatherNo}}">
+                          <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                          <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.fatherNo}}</div>
+                      </a>
+                  </div>
+
+            </div>   
+                 <div class = "row">
+                <div class = "col col-50 left">{{thirdPerNum}}</div>
+
+
+
+                     <div  class = "col col-50">
+
+                         <a ng-show="contractList[localSelectedArray[index]].json.thirdPersonNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.thirdPersonNo}}">
+                             <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                             <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.thirdPersonNo}}</div>
+                         </a>
+                     </div>
+
+            </div>
+            <div class = "row">
+                <div class = "col col-50 left">{{phoneAll}}</div>
+
+
+                <div  class = "col col-50">
+
+                    <a ng-show="contractList[localSelectedArray[index]].json.mobilePhone.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.mobilePhone}}">
+                        <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                        <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.mobilePhone}}</div>
+                    </a>
+                </div>
+
+            </div>
+            
+             <div class = "row">
+                <div class = "col col-50 left">{{actualAddress}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.actAddress}}</div>
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{familyAddress}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.regAddress}}</div>
+            </div>
+             <div class = "row">
+                <div class = "col col-50 left">{{compNameAddr}}</div>
+                <div class = "col col-50 right" ng-if="contractList[localSelectedArray[index]].json.companyName==undefined || contractList[localSelectedArray[index]].json.companyName==''">{{contractList[localSelectedArray[index]].json.offAddress}}</div>
+                <div class = "col col-50 right" ng-if="contractList[localSelectedArray[index]].json.companyName.length>0">{{contractList[localSelectedArray[index]].json.companyName}} & {{contractList[localSelectedArray[index]].json.offAddress}}</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-50 left">{{addrSkipField}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.skipAddress}}</div>
+            </div>
+           <div class = "row">
+                <div class = "col col-50 left">{{custContId}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.appAccountNo}}</div>
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{brotherInLawNumber}}</div>
+
+
+                  <div  class = "col col-50">
+
+                      <a ng-show="contractList[localSelectedArray[index]].json.brotherInLawNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.brotherInLawNo}}">
+                          <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                          <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.brotherInLawNo}}</div>
+                      </a>
+                  </div>
+
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{brotherNumber}}</div>
+
+
+                        <div  class = "col col-50">
+
+                            <a ng-show="contractList[localSelectedArray[index]].json.brotherNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.brotherNo}}">
+                                <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                                <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.brotherNo}}</div>
+                            </a>
+                        </div>
+
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{custFullName}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.lastName}} {{contractList[localSelectedArray[index]].json.firstName}}</div>
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{daughterNumber}}</div>
+
+                        <div  class = "col col-50">
+
+                            <a ng-show="contractList[localSelectedArray[index]].json.daughterNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.daughterNo}}">
+                                <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                                <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.daughterNo}}</div>
+                            </a>
+                        </div>
+
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{friendNumber}}</div>
+
+
+
+                        <div  class = "col col-50">
+
+                            <a ng-show="contractList[localSelectedArray[index]].json.friendNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.friendNo}}">
+                                <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                                <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.friendNo}}</div>
+                            </a>
+                        </div>
+
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{idCardNumber}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.idCardNumber}}</div>
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{otherRelative}}</div>
+
+
+                        <div  class = "col col-50">
+
+                            <a ng-show="contractList[localSelectedArray[index]].json.otherRelativeNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.otherRelativeNo}}">
+                                <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                                <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.otherRelativeNo}}</div>
+                            </a>
+                        </div>
+
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{sisterNumber}}</div>
+
+                        <div  class = "col col-50">
+
+                            <a ng-show="contractList[localSelectedArray[index]].json.sisterNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.sisterNo}}">
+                                <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                                <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.sisterNo}}</div>
+                            </a>
+                        </div>
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{sonNumber}}</div>
+
+                        <div  class = "col col-50">
+
+                            <a ng-show="contractList[localSelectedArray[index]].json.sonNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.sonNo}}">
+                                <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                                <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.sonNo}}</div>
+                            </a>
+                        </div>
+            </div>
+                    <div class = "row">
+                <div class = "col col-50 left">{{uncleNumber}}</div>
+
+
+                        <div  class = "col col-50">
+
+                            <a ng-show="contractList[localSelectedArray[index]].json.uncleNo.length > 0" href="tel:{{contractList[localSelectedArray[index]].json.uncleNo}}">
+                                <div style="float:right;" ><img class="callButtonIcon" src="images/call_button.png" /></div>
+                                <div class="callButtonNum">{{contractList[localSelectedArray[index]].json.uncleNo}}</div>
+                            </a>
+                        </div>
+            </div>
+            </ion-list>
+        </div>
+        
+
+    </ion-content>
+    
+   <div class="bar-subfooter bar-assertive contPrevLink"  ng-click="goBack()" >
+        {{preButton}}
+    </div>
+    <div class="bar-subfooter bar-assertive nextLink" ng-class="{ 'nextLinkViatname': nextbuttoncontact }"   ng-click="goToNextInfo('fECREDIT.loanInformation')">
+        {{nextButton}}
+    </div>
+    
+    <ion-footer-bar  align-title="left" class="bar-assertive footerTabBar" >
+      <!-- <div class="buttons">
+          <button class="button"><img class="bottomTabImages" src="img/print.png" />  
+              <figcaption>{{footerPR}}</figcaption>
+          </button>
+      </div> -->
+     <div class="buttons" ng-click="goToRecordUpload(contractList[localSelectedArray[index]])">
+        <button class="button"><img class="bottomTabImages" src="img/upload.png" />
+            <figcaption> {{footerUR}}</figcaption>
+        </button>
+      </div>
+     <div class="buttons" ng-click="goToContRepos(contractList[localSelectedArray[index]])">
+        <button class="button"><img class="bottomTabImages" src="img/reposessions.png" />
+            <figcaption> {{footerRepos}}</figcaption>
+         </button>
+      </div>
+      <div class="buttons footerLastButton" ng-click="goToContTerm(contractList[localSelectedArray[index]])">
+        <button class="button"><img class="bottomTabImages" src="img/contract_termination.png" /> 
+            <figcaption> {{footerCT}}</figcaption>
+          </button>
+      </div>
+      
+      
+    </ion-footer-bar>
+</ion-view>

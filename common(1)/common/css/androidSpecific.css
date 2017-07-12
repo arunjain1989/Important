@@ -1,0 +1,235 @@
+ .filtercss{
+ position: relative !important;
+ margin-top:8px !important;
+ margin-right: 1% !important;
+ float: right !important;
+ margin-left: auto !important;
+
+ }
+  .filtercssmap{
+ position: relative !important;
+ margin-top:8px !important;;
+ margin-right: 1% !important;
+ float: right !important;
+ margin-left: auto !important;
+ }
+.todatedatecss{
+height: 25px !important;
+    border: 1px solid green;
+        float: right;
+      width: 50%;
+   margin-top: 1px;
+  margin-right: 1px;	
+}
+
+
+
+.notibar{
+    display: block;
+    width: auto;
+    height: 44px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.nextbuttoncss{
+	
+margin-left: 75% !important;	
+	
+}
+
+.contractListContainerRecord{
+	
+	margin-top: 25% !important;
+}
+
+
+.contractListContainer {
+	margin-top: 44% !important;
+}
+
+.contHeaderFigCaptionViet {
+	margin-right: -18px !important;
+}
+
+.selectalltext {
+	width: 150px !important;
+}
+
+.recordContentTopCss {
+	margin-top: 32% !important;
+}
+
+
+.onlineButtons{
+ padding:0px 6px 0px 6px !important; 
+ width:100%;
+ display:block; 
+ background: white;
+ border: none;
+ line-height: 0px;
+ height: 24px
+}
+
+
+.bar.bar-dark .title {
+	/*position:relative;*/
+	right: 40 !important;
+	left: 40 !important;
+	text-align: center;
+	font-weight: 300;
+}
+
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #fff;
+}
+
+.preLink2 {
+	margin-left: -8% !important;
+}
+
+.nextLink2 {
+	float: right;
+	bottom: 10%;
+	margin-right: 3%;
+	height: 30px;
+	width: 70px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 5px;
+	color: #008345;
+
+}
+
+.preLink {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 3%;
+	height: 30px;
+	width: 100px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 5px;
+	color: #008345;
+	font-color: #008345;
+}
+
+.preLink2 {
+	float: left;
+	bottom: 10%;
+	margin-left: 1%;
+	height: 30px;
+	width: 100px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 5px;
+	color: #008345;
+	font-color: #008345;
+}
+
+.nextPreDiv {
+	width: 100%;
+	height: 50px;
+}
+
+#serchIconcontract {
+	padding: 0px;
+	margin: 0px;
+	color: green;
+	min-width: 0px !important;
+	width: 5% !important;
+}
+
+.recordContent {
+	top: 16% !important;
+}
+
+.item-icon-left:HOVER {
+	color: green;
+}
+
+.checkinButton {
+	height: 10px !important;
+}
+
+.search_text_bottom {
+	margin-bottom: 6px;
+}
+
+.cale_fontsize {
+	font-size: 7pt;
+}
+
+
+.record_input_cal{
+top:11px;
+margin-right:55px;
+}
+
+.nextLinkCt{
+    margin-left:  75%;
+    height:30px;
+    font-size: 16px;
+    text-decoration: underline;   
+    cursor:pointer;
+    padding: 5px;
+    color: #008345;
+}
+
+
+
+.contColumnHeader{
+    border:none !important;
+    background-color: #54B847;
+    text-align: center;
+    height: 31%;
+    width: 99%;
+    display: inline-flex;
+    padding:0px;
+    margin: 3% 0.5%;
+    color: #ffffff;
+}
+
+#selectAllCheckBox.item-checkbox{
+     background-color: #58585B !important;
+    color: #ffffff;
+    height: 94%;
+    width: 140px;
+    top:2px;
+    left:0px;
+}
+
+.selectAllOpenFirst{
+   display:inline-flex;
+    width:70%;
+    height:95%
+}
+
+.nextLinkViatname{
+       position: absolute;
+          bottom: 12%;
+          margin-left: 75%;
+          width:120px;
+          height:30px;
+          font-size: 16px;
+          text-decoration: underline;
+          cursor:pointer;
+          padding: 5px;
+          color: #008345;
+}
+
+
+.contractSearch{
+	width:100%;
+	border-radius: 5px;
+	height: 35px;
+	border:none;
+	box-shadow:0px 0px 5px #888888;
+	background-color:white;
+	text-align: center;
+}
+.recordCalDiv{
+    width: 78% !important;
+}

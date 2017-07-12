@@ -1,0 +1,224 @@
+<ion-view title="{{attachments}}" id="page31">
+
+
+
+ <ion-nav-buttons side="left">
+     <div ng-click="myGoBack()" style="width: 100%; height: 100%">
+                <img class="headerIconsLeft" src="img/back_button.png" >
+     </div>
+            </ion-nav-buttons>
+
+
+<ion-nav-buttons side="right">
+    <figcaption ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }"   class="contHeaderFigCaption"  ng-click="myGoBack()" >{{cancelButton}}</figcaption>
+                 <img   class="headerIconsRight" ng-click="myGoBack()" src="img/cancel.png">
+               
+</ion-nav-buttons>
+
+
+
+<ion-content   padding="true" class="openAttachClass"  >
+
+		
+		
+
+<!--<div   ng-repeat="openAttach in  (attachmentAllContactdata | filter:{json :{'contractId': contactidopenattach }}:true)" >-->
+
+
+<div   ng-repeat="openAttach in  attachmentAllContactdata" >
+
+<div class="card" ng-if="openAttach.attachmentType =='text/plain'" ng-click="base64(openAttach.notificationAttachmentId,openAttach.attachmentName,openAttach.contractId)">
+<div style="display: inline-flex;" >
+    <img  src="./img/text.png" style="height: 80px;
+margin-left: 20px; padding: 4px; ">
+
+<div style="color: green;
+position: relative;
+left: 5%;
+margin-top: 5%; width: 39%;">
+    {{openAttach.attachmentName}}
+</div>
+
+    <img  src="./img/download_icon.png"
+          style="width: 15px; height: 15px;
+      margin-top: 30px;
+    margin-left: 33px;
+    position: absolute;
+    right: 20px;" />
+
+</div>
+
+</div>
+
+
+<div class="card" ng-if="openAttach.attachmentType =='application/pdf'" ng-click="base64(openAttach.notificationAttachmentId,openAttach.attachmentName,openAttach.contractId)">
+    <div style="display: inline-flex;">
+    <img  src="./img/pdf.png" style="height: 80px;
+        margin-left: 20px; padding: 4px;">
+        
+        
+        <div style="color: green;
+position: relative;
+left: 5%;
+margin-top: 5%; width: 39%;">
+            {{openAttach.attachmentName}}
+        </div>
+
+        <img  src="./img/download_icon.png"
+              style="width: 15px; height: 15px;
+          margin-top: 30px;
+    margin-left: 33px;
+        position: absolute;
+    right: 20px;" />
+
+         </div>
+</div>
+
+
+<div class="card" ng-if="openAttach.attachmentType =='application/msword'" ng-click="base64(openAttach.notificationAttachmentId,openAttach.attachmentName,openAttach.contractId)">
+    <div style="display: inline-flex;">
+    <img  src="./img/doc.png" style="height: 80px;
+        margin-left: 20px; padding: 4px;">
+        
+        
+        <div style="color: green;
+position: relative;
+left: 5%;
+margin-top: 5%; width: 39%;">
+            {{openAttach.attachmentName}}
+        </div>
+
+        <img  src="./img/download_icon.png"
+              style="width: 15px; height: 15px;
+          margin-top: 30px;
+    margin-left: 33px;
+        position: absolute;
+    right: 20px;"/>
+
+        </div>
+</div>
+
+<div class="card" ng-if="openAttach.attachmentType =='application/vnd.openxmlformats-officedocument.wordprocessingml.document'" ng-click="base64(openAttach.notificationAttachmentId,openAttach.attachmentName,openAttach.contractId)">
+    <div style="display: inline-flex;">
+    <img  src="./img/doc.png" style="height: 80px;
+        margin-left: 20px; padding: 4px;">
+        
+        
+        <div style="color: green;
+position: relative;
+left: 5%;
+margin-top: 5%; width: 39%;">
+            {{openAttach.attachmentName}}
+        </div>
+
+        <img  src="./img/download_icon.png"
+              style="width: 15px; height: 15px;
+          margin-top: 30px;
+    margin-left: 33px;
+        position: absolute;
+    right: 20px;" />
+
+        </div>
+</div>
+
+
+<div class="card" ng-if="openAttach.attachmentType =='image/jpeg'" ng-click="base64(openAttach.notificationAttachmentId,openAttach.attachmentName,openAttach.contractId)">
+    <div style="display: inline-flex;">
+    <img  src="./img/jpeg.png" style="height: 80px;
+        margin-left: 20px; padding: 4px;">
+        
+        <div style="color: green;
+position: relative;
+left: 5%;
+margin-top: 5%; width: 39%;">
+            {{openAttach.attachmentName}}
+        </div>
+
+        <img  src="./img/download_icon.png"
+              style="width: 15px; height: 15px;
+          margin-top: 30px;
+    margin-left: 33px;
+        position: absolute;
+    right: 20px;" />
+
+         </div>
+</div>
+
+<div class="card" ng-if="openAttach.attachmentType =='image/png'" ng-click="base64(openAttach.notificationAttachmentId,openAttach.attachmentName,openAttach.contractId)">
+    <div style="display: inline-flex;">
+    <img  src="./img/jpeg.png" style="height: 80px;
+        margin-left: 20px; padding: 4px;">
+        <div style="color: green;
+position: relative;
+left: 5%;
+margin-top: 5%; width: 39%;">
+            {{openAttach.attachmentName}}
+        </div>
+
+
+
+
+    <img  src="./img/download_icon.png"
+          style="width: 15px; height: 15px;
+          margin-top: 30px;
+    margin-left: 33px;
+        position: absolute;
+    right: 20px;" />
+
+
+
+        </div>
+</div>
+
+
+
+<div class="card" ng-if="openAttach.attachmentType =='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'"  ng-click="base64(openAttach.notificationAttachmentId,openAttach.attachmentName,openAttach.contractId)">
+    <div style="display: inline-flex;">
+    <img  src="./img/excel.png" style="height: 80px;
+        margin-left: 20px; padding: 4px;">
+        
+        <div style="color: green;
+position: relative;
+left: 5%;
+margin-top: 5%; width: 39%;">
+            {{openAttach.attachmentName}}
+        </div>
+        <img  src="./img/download_icon.png"
+              style="width: 15px; height: 15px;
+          margin-top: 30px;
+    margin-left: 33px;
+       position: absolute;
+    right: 20px;" />
+        </div>
+</div>
+
+<div class="card" ng-if="openAttach.attachmentType =='application/vnd.ms-excel'"  ng-click="base64(openAttach.notificationAttachmentId,openAttach.attachmentName,openAttach.contractId)">
+    <div style="display: inline-flex;">
+    <img  src="./img/excel.png" style="height: 80px;
+        margin-left: 20px; padding: 4px;">
+        
+        <div style="color: green;
+position: relative;
+left: 5%;
+margin-top: 5%; width: 39%;">
+            {{openAttach.attachmentName}}
+        </div>
+        <img  src="./img/download_icon.png"
+              style="width: 15px; height: 15px;
+          margin-top: 30px;
+    margin-left: 33px;
+       position: absolute;
+    right: 20px;" />
+        </div>
+</div>
+
+
+
+</div>
+</ion-content>
+
+
+
+
+
+</ion-view>

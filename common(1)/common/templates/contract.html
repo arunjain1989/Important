@@ -1,0 +1,85 @@
+<ion-view title="{{contractTitle}}" id="page2" class="contractView">
+      <ion-nav-buttons
+            side="left">
+        <button class="button button-icon button-clear"
+                menu-toggle="left">
+            <img src="images/menu.png" alt="" class="drawerMenuImage"/> </button>
+        <!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">
+        <div class="iconSeprator" ng-hide="true"></div>-->
+        <!-- <img class="headerIconsLeft headerIconsLeft2" ng-hide="true"
+             src="./images/back_button.png"> --> </ion-nav-buttons> 
+             <ion-nav-buttons side="right">
+  
+                <figcaption ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }"  class="contHeaderFigCaption"  ng-click="closeContractModule()" >{{cancelButton}}</figcaption>
+                 <img   class="headerIconsRight" ng-click="closeContractModule()" src="img/cancel.png">
+               
+</ion-nav-buttons>
+     <div class="searchAndSelectBox">
+    	
+    	<div class="searchBoxDiv">
+
+
+
+
+
+
+	   		  <form id="contractSearchbox" class="list" >
+
+                  <div style="display:inline-flex;color:white;background-color: white;border-radius: 8px;height:38px;width:100%;border: 1px solid lightgrey;">
+                      <i serchIconcontract ng-click="Searchunpaid()" style="padding:8px"><img style="width: 15px ; height: 15px;"  src="./images/search.png" /> </i>
+                      <input type="submit" ng-click="Searchunpaid()" id="mytext"  ng-value="searchBtn" ng-class="{ 'searchTextBlack': searchTextBlack }"  style="background-color:white;border-style: none;color:none;width:80%;padding-top:3px;height:35px;text-align: left;z-index: 25;color: lightgrey;">
+                      <img ng-click="clearFilter()" alt="filter"  src="./images/filter.png"   class="filtercss" >
+
+
+                  </div>
+
+
+	        </form>
+	     
+        </div>
+       
+        <div class="selectAllBar">
+            <div class="selectAllOpenFirst" >
+                <ion-checkbox id="selectAllCheckBox"  ng-model="checkBoxValue" ng-change="selectAllContract(checkBoxValue)" class="checkbox-square">{{selectAll}}
+                </ion-checkbox> 
+            </div>
+             <div class="selectAllOpenSecond">
+                 <button ng-click="goToContractDetail()" class="openButton button button-light button-small">
+                  {{openButton}}
+                </button>
+            </div>
+      
+        </div>
+         
+        <div class="contColumnHeader" ng-model="selectedContractMap">
+	          <div style="width:22%" class = "headerBarCols">{{contractId}}</div>
+             <div style="width:32%" class = "headerBarCols">{{contCustName}}</div>
+             <div style="width:29%" class = "headerBarCols">{{dateAssign}} </div>
+             <div style="width:17%" class = "headerBarCols">{{directionText}}</div>
+                
+	    </div> 
+  
+    </div>
+ 
+	    <ion-content has-bouncing="false" id="contentTop" class="contractListContainer" padding="true" overflow-scroll="false">
+	       
+	   		 <div class="contractRows" class="bar bar-subheader bar-balanced"  ng-repeat="contract in contractList" 
+	   		 ng-class="{contListChecked : selectedContractMap[$index]}" ng-click="selectContractListItems($index)" on-double-click="doubleClickContact($index)">
+		         <div style="width:22%" class = "contactListCols"  >{{contract.json.contractId}}</div>
+	             <div style="width:32%" class = "contactListCols">{{contract.json.firstName}}</div>
+	             <div style="width:29%" class = "contactListCols">{{contract.json.assignedDate | date:'dd-MM-yyyy' }}</div>
+	             <div style="width:17%" class = "contactListCols" ng-click="goToMap(contract)">
+	           		  <img class="dirAndAttachImages" src="img/direction.png" />
+	             </div>    
+		   	 </div>
+		     
+		      
+	    </ion-content>
+ 
+    <div style="display:none;" ng-click="goToContractDetail()" class="seeDetailBtn">
+        
+          See Details
+        
+    </div>
+ 
+</ion-view>

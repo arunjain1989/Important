@@ -1,0 +1,107 @@
+<ion-view title="Search" id="page3">
+    <ion-content padding="true" overflow-scroll="false"  has-bouncing="false" class="searchcontent" >
+   
+
+        <div style="margin-top: 16%">
+
+            <span ng-click="closebutton()" class="close-btn"><a class ="a" href="#">X</a></span>
+
+
+
+            <ul class="ulrow">
+                <li class="{{quickview}}" ng-click="quickbuttonclick()">{{quickSearchtitle}} </li>
+                <li class="{{advanceview}}" ng-click="advancebuttonclick()">{{advanceSearchtitle}}</li>
+
+            </ul>
+
+
+
+ <div ng-hide="quickhide" style="padding: 1px 0; display: inline-flex;width: 100%;border: 1px solid lightgray;margin-top: 4px; background-color: white;">
+
+<input type="search" style="margin-left: 5px;width: 86%;" placeholder="{{enterKeyTitle}}" ng-model="valueData" ng-enter="simpleSearch(valueData)" />
+<img src="./images/search.png" style="width: 20px; height: 20px; margin-top: 8px;"  ng-click="simpleSearch(valueData)" />
+
+ </div>
+
+
+
+
+
+            <div ng-hide="advancehide">
+
+                <div style="height:30px;background-color: #47ad37;margin-top: 6px;" ng-click="filterconditionclick() ">
+
+
+                    <label class="advanceheaderview">{{FilterConditiontitle}}</label>
+                    <img src="./images/dropdownwhite.png" style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;" />
+                </div>
+
+
+
+
+
+                <ul style="background-color: white" ng-hide="filterdropdownview">
+                    <li class="advancels" id="filt1" ng-click="filterSelected('contractId',1)">{{contractIdStringInSearch}}</li>
+                    <li class="advancels" id="filt2" ng-click="filterSelected('custId',2)">{{customerId}}</li>
+                    <li class="advancels" id="filt3" ng-click="filterSelected('firstName',3)">{{customerName}}</li>
+                    <li class="advancels" id="filt4" ng-click="filterSelected('offAddress',4)">{{AddressTitile}}</li>
+                     <li class="advancels" id="filt5" ng-click="filterSelected('assignedDate',5)">{{assignedDateStr}}</li>
+                    <li class="advancels" id="filt6" ng-click="filterSelected('nextActionDate',6)">{{actionDateStr}} </li>
+                </ul>
+
+
+
+                <div style="height:30px;background-color: #47ad37" ng-click="filterformulaclick() ">
+
+                    <label class="advanceheaderview">{{filterFormulaTitle}}</label>
+                    <img src="./images/dropdownwhite.png" style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;" />
+                </div>
+
+
+                <ul style="background-color: white" ng-hide="formuladropdownview">
+                    <li class="advancels" id="filt7" ng-click="formulaSelected(1,7)">{{equalTitle}}</li>
+                    <li class="advancels" id="filt8" ng-click="formulaSelected(2,8)">{{NotEqualTitle}}</li>
+                    <li class="advancels" id="filt9" ng-click="formulaSelected(3,9)">{{endWithTitle}}</li>
+                    <li class="advancels" id="filt10" ng-click="formulaSelected(4,10)">{{includeTitle}}</li>
+                    <li class="advancels" id="filt11" ng-click="formulaSelected(5,11)">{{notIncludeTitle}}</li>
+                    <li class="advancels" id="filt12" ng-click="formulaSelected(6,12)">{{ifAnyTitle}}</li>
+                </ul>
+
+
+                <div style="height:30px;background-color: #47ad37" ng-click="addresstypeclick()">
+
+                    <label class="advanceheaderview">{{addressTypetitle}}</label>
+                    <img src="./images/dropdownwhite.png" style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;" />
+                </div>
+
+
+
+                <ul style="background-color: white" ng-hide="addressdropdownview">
+                    <li class="advancels" id="filt13" ng-click="filterSelected('actAddress',13)">{{currentTitle}}</li>
+                    <li class="advancels" id="filt14" ng-click="filterSelected('regAddress',14)">{{permanent}}</li>
+                    <li class="advancels" id="filt15" ng-click="filterSelected('offAddress',15)">{{work}}</li>
+
+                </ul>
+
+
+
+                <div style=" padding: 1px 0; display: inline-flex;width: 100%;border: 1px solid lightgray;margin-top: 4px; background-color: white;" class="search_text_bottom">
+                    <input type="search" style="width:86%; margin-left: 5px" ; placeholder="{{enterKeyTitle}}"  ng-enter="advanceSearch(valueData)"   ng-model="valueData" ng-init="valueData=''"/>
+
+                    <img src="./images/search.png" style="width: 20px; height: 20px; margin-top: 10px; margin-left: 2px;"  ng-click="advanceSearch(valueData)" />
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </ion-content>
+
+
+
+</ion-view>

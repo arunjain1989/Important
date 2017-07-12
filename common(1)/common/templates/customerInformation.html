@@ -1,0 +1,105 @@
+<ion-view title="{{contDetailTitle}}" id="page2">
+      <ion-nav-bar class="bar-stable contNavBar">
+          
+            <ion-nav-buttons side="left">
+                <img class="headerIconsLeft" src="img/back_button.png" ng-click="nextdetail(-1)" ng-hide="hidePreviousInDetail">
+<!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">-->
+                <div class="iconSeprator" ng-hide="hidePreviousInDetail"></div>
+                  <img class="headerIconsLeft headerIconsLeft2"  src="img/next_button.png" ng-click="nextdetail(1)" ng-hide="hideNextInDetail">
+            </ion-nav-buttons>
+          <ion-nav-buttons side="right">
+              <img ng-click="closeContractSidePanel()" class="headerIconsRight" src="img/cancel.png">
+              <figcaption ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }"   class="contHeaderFigCaptionNew"> {{cancelButton}}</figcaption>
+              <img ng-click="toggleContractSidePanel()" class="headerIconsRight headerIconsRight1" src="img/contract_menu.png">
+              <figcaption  class="contHeaderFigCaptionNew">{{moreButton}}</figcaption>
+          </ion-nav-buttons>
+        </ion-nav-bar>
+    <div id="contDetailSubHeaderNew" class="bar bar-subheader bar-balanced">
+        <h2 class="title">{{custInformation}}</h2>
+    </div>
+    <ion-content  padding="true" class="contractInfoCard">
+       <div  class="card" ng-model="index">
+        <ion-list class="contractInfoItems">
+            
+             <div class = "row">
+                <div class = "col col-40 left xx">{{custPhoto}}</div>
+                <div class = "col col-60 customerProfilePicContainer">
+                <img id="custImage" class="customerProfilePic" src="img/profile.png" style="border-radius: 50%;margin-left: 50%;" />
+                </div>
+            </div>
+            
+            <div class = "row">
+                <div class = "col col-50 left">{{custName}} </div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.firstName}} {{contractList[localSelectedArray[index]].json.lastName}}</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-50 left">{{custGender}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.gender}}</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-50 left">{{custDob}}</div>
+                 <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.dateOfBirth | date:'dd-MM-yyyy'}}</div>
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{idCardNumber}}</div>
+                 <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.idCardNumber}}</div>
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{custFbNum}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.fbNumber}}</div>
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{fbOwner}}</div>
+                 <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.fbOwner}}</div>
+            </div>   
+                 <div class = "row">
+                <div class = "col col-50 left">{{custAppId}} </div>
+               <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.appId}}</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-50 left">{{custJobDesc}}</div>
+               <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.jobDescription}}</div>
+            </div>
+        
+           
+            </ion-list>           
+        </div>
+        
+
+    </ion-content>
+
+
+
+  <div class="bar-subfooter bar-assertive contPrevLink"  ng-click="goBack()" >
+        {{preButton}}
+    </div>
+    <div class="bar-subfooter bar-assertive nextLink" ng-class="{ 'nextLinkViatname': nextbuttoncontact }"   ng-click="goToNextInfo('fECREDIT.contactInformation')">
+        {{nextButton}}
+    </div>
+
+
+    <ion-footer-bar  align-title="left" class="bar-assertive footerTabBar">
+     <!--  <div class="buttons" ng-click="goToRecordUpload(contractList[localSelectedArray[index]])">
+          <button class="button"><img class="bottomTabImages" src="img/print.png" />  
+              <figcaption>{{footerPR}}</figcaption>
+          </button>
+      </div> -->
+     <div class="buttons" ng-click="goToRecordUpload(contractList[localSelectedArray[index]])">
+        <button class="button"><img class="bottomTabImages" src="img/upload.png" />
+            <figcaption> {{footerUR}} </figcaption>
+        </button>
+      </div>
+     <div class="buttons" ng-click="goToContRepos(contractList[localSelectedArray[index]])">
+        <button class="button"><img class="bottomTabImages" src="img/reposessions.png" />
+            <figcaption> {{footerRepos}}</figcaption>
+         </button>
+      </div>
+      <div class="buttons footerLastButton" ng-click="goToContTerm(contractList[localSelectedArray[index]])">
+        <button class="button"><img class="bottomTabImages" src="img/contract_termination.png" /> 
+            <figcaption> {{footerCT}}</figcaption>
+          </button>
+      </div>
+      
+      
+    </ion-footer-bar>
+</ion-view>

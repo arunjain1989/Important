@@ -1,0 +1,109 @@
+<ion-view title="Search" id="page3">
+    <ion-content padding="true"  >
+    
+<div>
+
+<span  ng-click="closebutton()"  class="close-btn"><a class ="a" href="#">X</a></span>
+
+
+   
+  <ul class="ulrow"> 
+<li class="quickview"  ng-click="quickbuttonclick()"><input type="submit"  value="Quick Search" style="border-style: none;background-color: transparent;margin-top: 8px; color: darkgray;font-size: 93%;"> </li> 
+<li class="quickview" ng-click="advancebuttonclick()"><input type="submit" value="Advanced Search" style="border-style: none;background-color: transparent;margin-top: 8px;color: darkgray;font-size: 93%;"></li> 
+ 
+</ul> 
+
+
+
+   <div ng-hide = "quickhide" style=" display: inline-flex;width: 100%;border: 1px solid lightgray;margin-top: 4px;">
+    <input type="text" style="margin-left: 9px;width: 86%;" placeholder="Enter Key|"/>
+  
+   <img src ="./images/search.png"  style="width: 20px; height: 20px; margin-top: 8px;"/>
+   
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   <div ng-hide = "advancehide" >
+   
+   <div  style="height:30px;background-color: #47ad37;margin-top: 6px;" ng-click="filterconditionclick() " > 
+   
+
+   <label class="advanceheaderview" >Filter Conditions </label>
+   <img src ="./images/dropdownwhite.png"  style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;"/>
+    </div>
+    
+
+  
+  
+  
+  
+  
+    
+ <ul style="background-color: white" ng-hide = "filterdropdownview"> 
+<li class="advancels">Contract ID</li> 
+<li class="advancels">Customer ID</li> 
+<li class="advancels">Customer’s Name</li> 
+<li class="advancels">Address</li> 
+</ul>
+ 
+   
+ 
+ <div style="height:30px;background-color: #47ad37" ng-click="filterformulaclick() " >
+   
+   <label class="advanceheaderview">Filter Formula </label>
+    <img src ="./images/dropdownwhite.png"  style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;"/>
+    </div>
+ 
+    
+ <ul style="background-color: white" ng-hide = "formuladropdownview"> 
+<li class="advancels">Equal</li> 
+<li class="advancels">Not Equal</li> 
+<li class="advancels">End With</li> 
+<li class="advancels">Include</li> 
+<li class="advancels">Not Include</li> 
+<li class="advancels">If any</li> 
+</ul>
+
+ 
+ <div style="height:30px;background-color: #47ad37" ng-click="addresstypeclick()" >
+   
+   <label class="advanceheaderview">Address Type</label>
+   <img src ="./images/dropdownwhite.png"  style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;"/>
+    </div>
+   
+   
+    
+ <ul style="background-color: white" ng-hide = "addressdropdownview"> 
+<li class="advancels">Current</li> 
+<li class="advancels">Permanent</li> 
+<li class="advancels">Work</li> 
+
+</ul>
+
+   
+ 
+  <label style=" display: inline-flex;width: 100%; border-top: 1px solid lightgrey;margin-top: 3px;">  <input type="text" style="width=90%" placeholder="Enter Key|"/>
+  
+   <img src ="./images/search.png"  style="width: 20px; height: 20px; margin-top: 10px;"/>
+  
+ </label>
+
+   </div>
+  
+   
+
+
+</div>
+
+
+    </ion-content>
+    
+    
+    
+</ion-view>
+

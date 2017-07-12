@@ -1,0 +1,126 @@
+<ion-view title={{bidderHeader}} >
+
+
+<!-- <ion-nav-buttons side="left">
+<img class="headerIconsLeft menuIcon" src="img/menu.png">
+<div class="iconSeprator"></div>
+<img class="headerIconsLeft headerIconsLeft2"
+	src="./images/back_button.png"> </ion-nav-buttons> 
+	
+	
+<ion-nav-buttons side="right">
+ <img  class="printheaderIconsRight"
+	src="./images/other_information.png">
+<figcaption class="printHeaderFigCaption">Info</figcaption> 
+
+</ion-nav-buttons>
+ -->
+
+
+<ion-nav-buttons side="left">
+<div class="recordBackDiv"  ng-click="bidderBack()" >
+            <img class="headerIconsLeft headerIconsLeft2 recordBack" src="img/back_button.png">
+                </div> </ion-nav-buttons> 
+	
+	
+	<ion-nav-buttons side="right">
+		<!--  <figure id="cancelRepossession">
+                 <img  class="headerIconsRight headerIconsRight1" ng-click="clearRepossession()"  src="img/clear.png">
+                     <figcaption class="contHeaderFigCaption">Cancel Termination</figcaption>
+                     </figure> -->
+		<figcaption  class="contHeaderFigCaption"  ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }" ng-click="bidderClose()" >{{cancelButton}}</figcaption>
+		<img   class="headerIconsRight" ng-click="bidderClose()" src="img/cancel.png">
+
+	</ion-nav-buttons>
+
+
+
+
+ <ion-content>
+
+	  <div class="row" id="greenColorBack" style="border: 0px solid;background-color: rgb(71, 173, 55);border-radius: 10px;margin-top: 3px;margin-left: 5px;margin-right: 7px;width: 97%;display: inline-flex;">
+		 <span id="statusViewBidder" style="height: 100%; width: auto;white-space: nowrap;color: white;margin-left:4%"  class="ng-binding">{{statusTitle}} : </span>
+
+		 <span id="approvedViewBidder"  style="color: white;padding-left: 5px;padding-right: 10px;" class="ng-binding">{{approvedViewValueBidd}} </span>
+	 </div>
+ 
+ <div  class="card" style="margin-top: 5px !important">
+    
+    <div class="row">
+		<div style="padding-left:10px;" class="col col-50 left">{{bidderName}}</div>
+		<div class="col col-50 right">
+			<input type="text" id="bidder_name"
+				style="width: 90%; height: 20px; border: 5px solid green; border-width: 1px;">
+		</div>
+	</div>
+	 
+	 <div class="row">
+		 <div style="padding-left:10px;" class="col col-50 left" >{{amount}}</div>
+		 <div class="col col-50 right">
+			 <input type="tel" id="bidder_amount" ng-keyup="numericOnly('bidder_amount');"  ng-blur="moneyFormat('bidder_amount');"
+					style="width: 90%; height: 20px; border: 5px solid green; border-width: 1px;">
+		 </div>
+	 </div>
+    
+     <div class="row">
+		<div style="padding-left:10px;" class="col col-50 left">{{idNumber}}</div>
+		<div class="col col-50 right">
+			<input type="text" id="bidderId"
+				style="width: 90%; height: 20px; border: 5px solid green; border-width: 1px;">
+		</div>
+	</div>
+	
+	 <div class="row">
+		<div style="padding-left:10px;" class="col col-50 left" >{{phoneNumber}}</div>
+		<div class="col col-50 right">
+			<input type="tel" maxlength="12" id="bidder_number" ng-keyup="phoneNumericOnly('bidder_number')"
+				style="width: 90%; height: 20px; border: 5px solid green; border-width: 1px;">
+		</div>
+	</div>
+          
+          
+
+          
+    </div>
+ <div style="display: none;">
+	 <div style="height:32px">
+
+		 <div class="repos_attachCheckInImg" ng-click="chekInBidder()" >
+			 <p>{{checkInButton}}</p>
+		 </div>
+
+
+
+	 </div>
+
+
+	 <div class="addrType" style="height:30px;background-color: #47ad37; margin-left: 4px;margin-right: 10px" ng-click="addresstypeclickViewBidder()" >
+		 <label class="advanceheaderview">{{addressType}}</label>
+		 <img src ="./images/dropdownwhite.png"  style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;"/>
+	 </div>
+	 <div>
+		 <ul class="addrTypeUl" style="background-color: white;margin-left: 10px;margin-right: 10px" ng-hide = "addressdropdownviewBidderView">
+			 <li ng-click="addressFunction(data,$event,$index)" ng-attr-id="addrTypeLiBidder{{$index}}" class="advancels" ng-repeat="data in addressTypeList">{{data.custAddr}}</li>
+
+		 </ul>
+
+	 </div>
+
+	 <div class="distanceDiv">
+		 <div class="distanceText" >{{distance}}:</div>
+		 <div class="distanceInput" > <span  id="distanceBidder" ></span></div>
+	 </div>
+	  </div>
+  <center>  <button class="addrType checkInCSS" id="saveBidderId" ng-click="saveBidder()"  style="margin-bottom: 10px" >{{saveButton}}</button> </center>
+  </ion-content>
+    <div class="addressPrompt" id="addrPromptPopUpBidder">
+	<h4>{{unableFindAddr}}</h4>
+	<h6>{{addrPromptMsgOnline}}</h6>
+	<textarea  rows="4" class="tArea" id="addrTextAreaBidder" ></textarea>
+	<div class="btn">
+		<div class="btns" ng-click="onAddrPromptBidder(2)" >{{cancelButton}}</div>
+		<div class="btns" ng-click="onAddrPromptBidder(1)" >{{proceedBtn}}</div>
+		<div class="btns" ng-click="onAddrPromptBidder(3)" >{{searchBtn}}</div>
+	</div>
+</div>
+</ion-view>

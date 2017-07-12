@@ -1,0 +1,50 @@
+<ion-view title="{{checkInHistoryTitle}}" id="pag50">
+    
+     <ion-nav-bar class="bar-stable contNavBar" align-title="center">
+        
+          <ion-nav-buttons side="left">
+                <div class="recordBackDiv"  ui-sref="fECREDIT.contractInformation" >
+                 <img class="headerIconsLeft headerIconsLeft2 recordBack" src="img/back_button.png">
+                </div>
+          </ion-nav-buttons>
+         <ion-nav-buttons side="right">
+                 <img  ui-sref="fECREDIT.contractInformation" class="headerIconsRight"  src="img/cancel.png">
+                <figcaption  ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }"  class="contHeaderFigCaption">{{cancelButton}}</figcaption>
+             <!--   <img class="headerIconsRight headerIconsRight1" ng-click="goToMap()"  src="img/direction_white.png">
+                 <figcaption class="contHeaderFigCaptionCheckIn"> {{directionText}}</figcaption>
+               -->
+            </ion-nav-buttons>
+        </ion-nav-bar>
+     
+     <ion-content  scroll="false"  class="has-header">
+    <!--  <form id="paidSearchbox" class="list" > -->
+            
+            
+            <div id="recordColumnHeader" style="margin-top:5px;margin-left:4px;margin-right:4px" class="bar bar-balanced">
+		         <div style="width:22%" class = "recordheaderBarCols">{{feCode}}</div>
+	             <div style="width:34%" class = "recordheaderBarCols">{{timeAndDate}}</div>
+	             <div style="width:22%" class = "recordheaderBarCols">{{checkInAddress}} </div>
+	             <div style="width:22%" class = "recordheaderBarCols">{{messge_cus_add}}</div>
+	               
+	   		 </div>  
+       <!--  </form>  -->
+        
+       
+        
+    </ion-content>
+
+    <div ng-hide="noDataFound" style="margin-top: 70%;margin-left: 17%;width:66%;text-align: center;font-size: 20px; color:#666666;" >{{noNotification}}</div>
+ 	<ion-content ng-hide="checkInList" style="margin-top: 16% !important;"  has-bouncing="true" class="contractListContainerRecord checkInContainer" padding="true" >
+
+   		 <div class="recordRows" class="bar bar-subheader bar-balanced" ng-repeat="checkInData in checkInDataList"  data-ng-click="selectedRecordElem(contract)">
+	         <div style="width:22%" class = "recordListCols" >{{checkInData.fcCode}} </div>
+             <div style="width:34%" class = "recordListCols"> {{checkInData.checkinDateTime.split(' ')[0] | date:'dd-MM-yyyy '}}{{checkInData.checkinDateTime.split(' ')[1]}}</div>
+             <div style="width:22%" class = "recordListCols">{{checkInData.checkinAddress}} </div>
+             <div style="width:22%" class = "recordListCols">{{checkInData.address}}
+             </div>    
+	    </div>
+	    </ion-content>
+    
+    
+    
+</ion-view>

@@ -1,0 +1,60 @@
+
+<!DOCTYPE form PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+<ion-content has-bouncing="false" scroll="false" id="loginPage"  >
+
+<div id ="mydiv" class="loginForm" >
+
+
+<div class="loginFields" style="padding-top:80px">
+<center> 
+<label class="item item-input userName" style=" border-radius:15px; background:transparent; width:50% ; height:35px ;">
+<img src ="./images/user.png"  style="width: 20px; height: 20px"/>
+<input id="usernameId"  class="userNameInput" type="text" autocorrect="off" data-dependency="passId"
+    autocapitalize="off"  placeholder="{{usernameLogin}}"  style="text-align: center;color: white;" ng-model="loginData.userName">
+</label>
+</center> 
+  
+ <center> 
+ <label  class="item item-input userName" autocorrect="off" 
+    autocapitalize="off" style=" margin-top:15px ;  border-radius:15px; background:transparent; height:35px; width:50% ; text-align: center;" >
+ <img src ="./images/password.png"  style="width: 20px; height: 20px"/>
+ <input id="passId" class="userNameInput" data-dependency="login_button" type="password"  placeholder="{{passwordLogin}}"  style="text-align: center;color: white;" ng-model="loginData.password">
+ </label>
+ </center>  
+  
+  
+<center>
+<!-- ui-sref="fECREDIT.home" -->
+<!-- ng-click="login()" -->
+ <button id="login_button"  ng-click="pushLogin()" class="userName logincss"
+  id="login" > {{loginButton}}
+ </button> 
+ </center> 
+ 
+
+ <center> 
+ <button id="cancel_button"   ng-click="exitFromApp()" class="userName cancelcss"
+  id="cancel"> {{clear_login}}
+</button> 
+</center>
+</div>
+ </div>
+ 
+ 
+ 
+<center> <img class="logoImageFE" src="images/logo.png" /></center>
+
+
+<p style="text-align: center;margin: -0.5em; font-size:smaller; color: #008546 ; padding-top: 15px">{{privacy}} <img src="images/security-lock.png" width="10px" height="10px"> </p>
+<p style="text-align: center;margin: -0.5em;font-size: smaller; color: #575757"> FE Credit - VPBank Finance Company Limited</p>
+<p style="text-align: center;font-size: smaller;color: #575757 "> ©2017 - {{copyrightButton}} FE CREDIT</p>
+<p style="text-align: center;font-size: smaller;color: #575757 ">UAT Version:{{appVersionDisplay}}</p>
+
+
+</ion-content>
+
+   
+

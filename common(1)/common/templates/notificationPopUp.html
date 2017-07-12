@@ -1,0 +1,52 @@
+<ion-view title="Search" id="page3">
+    <ion-content padding="true" overflow-scroll="false"  has-bouncing="false" class="searchcontent" >
+        
+        
+        <div style="margin-top: 16%;
+            margin-bottom: -22px;">
+            
+            <span ng-click="closebuttonNotification()" class="close-btn"><a class ="a" href="#">X</a></span>
+            </div>
+       
+       
+       <div class="notificationpopdate">{{fromdate}}
+         
+         <input type="date" id="Fromdatetimepicker" class="todatedatecss" name="date" >
+                  
+          </div>
+            
+            <div class="notificationpopdate" style="margin-top: 2%">{{todate}}
+                
+                <input type="date" id="TOdatetimepicker" class="todatedatecss" name="date">
+                    
+                    </div>
+            
+            <div>
+            <button class="notificationbutton" ng-click="noticationSerachHideShow()" >
+                Search
+                <img   class="notificationdropdown"  src="images/dropdownwhite.png">
+            </button>
+             </div>
+             
+            
+            
+            <ul style="background-color: white" ng-hide="notificationdropdownview">
+                <li class="Notificationadvancels" ng-hide="notificationPopUpDropDownContractHide" id="filt1" ng-click="NotificationformulaSelected('ContractID',1)">{{contractId}}</li>
+                <li class="Notificationadvancels" ng-hide="notificationPopUpDropDownContractHide" id="filt2" ng-click="NotificationformulaSelected('Customername',2)">{{customerName}}</li>
+                <li class="Notificationadvancels" ng-hide="notificationPopUpDropDownMessageHide" id="filt3" ng-click="NotificationformulaSelected('Message',3)">{{notification_message}}</li>
+                <li class="Notificationadvancels" ng-hide="notificationPopUpDropDownMessageHide" id="filt4" ng-click="NotificationformulaSelected('Title',4)">{{title_message}}</li>
+            </ul>
+            
+            <div style=" padding: 1px 0; display: inline-flex;width: 100%;border: 1px solid lightgray;margin-top: 4px; background-color: white;" class="search_text_bottom">
+                <input type="search" id="notiSearch" style="width:86%; margin-left: 5px" ; placeholder="{{enterKeyTitle}}"  ng-enter="advanceSearch(valueData)"   ng-model="valueData" ng-init="valueData=''"/>
+                
+                <img src="./images/search.png" style="width: 20px; height: 20px; margin-top: 10px; margin-left: 2px;"  ng-click="NotificationSearchClick()" />
+                
+            </div>
+            
+            
+                </ion-content>
+    
+    
+    
+</ion-view>

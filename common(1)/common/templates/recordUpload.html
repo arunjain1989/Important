@@ -1,0 +1,253 @@
+<ion-view title="{{recordTitle}}" id="page25"  ng-init="initData()">
+    
+    
+    
+    <ion-nav-buttons side="left">
+        <div class="recordBackDiv"  ng-click="closeRecordUploadModule()" >
+            <img class="headerIconsLeft headerIconsLeft2 recordBack" src="img/back_button.png">
+                </div>
+    </ion-nav-buttons>
+    
+    
+    <ion-nav-buttons side="right">
+      
+                
+                   
+                      <figcaption  class="contHeaderFigCaption"  ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }" ng-click="clearData()" >{{clearButton}}</figcaption>
+		<img   class="headerIconsRight headerIconsRight1" ng-click="clearData()" src="img/clear.png">
+                    
+      <figcaption  class="contHeaderFigCaption"  ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }" ng-click="closeRecordUploadModule()" >{{cancelButton}}</figcaption>
+		<img   class="headerIconsRight" ng-click="closeRecordUploadModule()" src="img/cancel.png">
+
+    </ion-nav-buttons>
+     
+     <div id="contDetailSubHeader" style="display:none;" class="bar bar-subheader bar-balanced"
+	style="height: 45px">
+
+
+	<div style="display:inline-flex;margin-left:35%">
+		<div ng-click="open()">
+
+			<div>
+				<img class="bottomTabImages" src="images/open.png" style="width: 20px;height:15px;margin-left: 10px"/>
+			</div>
+			<span ng-class="{ 'openButtonRecordUpload': cnclButtonViet }">{{openButton}}</span>
+		</div> 
+	
+	<div class="saveDraftDiv" ng-click="save(1)">
+		<div>
+			<img class="bottomTabImages" src="images/save_draft.png"style="width: 18px;height:15px;margin-left:35px" />
+		</div>
+		<span style=" margin-left:15px">{{saveDraftButton}}</span>
+	</div>
+	
+
+</div>
+</div>
+
+ 
+ <ion-content id="recoUpldContent"  class="recordUploadContent" has-bouncing="true" overflow-scroll="true"  class="has-header" >
+<div class="card"  style="margin:10px" ng-model="recordData">
+
+
+	
+
+	<div class="row">
+		<div class="col col-50 left">{{actionDateTimeButton}}</div>
+		<div class="col col-50 right">
+		<div  style="position:relative;top:0px;z-index: 120;" ng-model="selectedDraftRecord">
+		
+		<!-- <p id="actiontime"class="divTime">Time</p> -->
+		</div>
+		<div class="recordCalInput recordInputCalender" >
+		<input disabled type="text" id="calender_actiondate" class="cal-imgnext" ng-click="recordactioncalender()"     style="width: 120px; height: 20px;font-size:7pt;background-color:white;padding: 3px 0px 0px 2px;"/>
+       <img class="cal-img record_input_cal imageiphone"  src="./images/calender.png" >
+ 		</div>
+		</div>
+		</div>
+	<!-- <div class="row">
+		<div class="col col-50 left">{{contactedByButton}}</div>
+		<div class="col col-50 right">
+		<div id="conByselectValue" class="recordConby"  ng-click="contactedBy()">
+		<div id="conBychangeValue"  style="width: 120px; height: 20px; border-radius :5px;text-align:center; background-color:#008345;color:#ffffff;">
+		Select
+		</div>
+		<div >
+		<img  class="downArrow" src="./images/down_arrow.png" style="position:fixed;margin-left:-14px;margin-top:1px;width: 12px;padding-top:4px; height: 15px;">
+	</div></div>
+		</div>
+		
+		</div>
+	-->
+	<div class="row">
+		<div class="col col-50 left" >{{contactedByButton}}</div>  <!-- contacted by = reminder mode-->
+		<div class="col col-50 right">
+			<div id="placeselectValue" class="recordConby"  ng-click="Reminder()">
+				<div id="remenderchangeValue" ng-model="contByModel" class="drop_down_text">
+					Select
+				</div>
+				<div><img  class="downArrow" src="./images/down_arrow.png" style="position:fixed;margin-left:-14px;margin-top:1px;width: 12px;padding-top:4px; height: 15px;">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-50 left">{{contactedwithButton}}</div>
+		<!-- aka person contacted -->
+		<div class="col col-50 right">
+			<div id="conwithselectValue" class="recordConby" ng-click="contactedWith()">
+		
+		<div id="conwithchangeValue"  ng-model="contWithModel" class="drop_down_text">
+		Select</div>
+		
+		<div>
+		<img   class="downArrow"  src="./images/down_arrow.png"  style="position:fixed;margin-left:-14px;margin-top:1px;width: 12px;padding-top:4px; height: 15px;">
+		</div>
+	</div>
+		</div>
+		</div>
+	
+	<div class="row">
+		<div class="col col-50 left">{{actionCodeButton}}</div>
+		<div class="col col-50 right">
+			<div id="actionselectValue" class="recordConby" ng-click="actionCode()">
+		<div id="actionchangeValue" ng-model="actionCodeModel"  class="drop_down_text">
+		Select
+		</div>
+		<div>
+		<img  class="downArrow"  src="./images/down_arrow.png" style="position:fixed;margin-left:-14px;margin-top:1px;width: 12px;padding-top:4px; height: 15px;">
+	</div>
+		</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col col-50 left" >{{placeContactedButton}}</div>
+		<div class="col col-50 right">
+			<div id="placeselectValue" class="recordConby"  ng-click="placeContacted()">
+		<div id="placechangeValue" ng-model="placeContModel" class="drop_down_text">
+		Select
+		</div>
+		<div><img  class="downArrow" src="./images/down_arrow.png" style="position:fixed;margin-left:-14px;margin-top:1px;width: 12px;padding-top:4px; height: 15px;">
+	</div>
+		</div>
+		</div>
+	</div>
+	
+    
+    <div class="row">
+        <div class="col col-50 left" >{{contact_mode}}</div>
+        <div class="col col-50 right">
+            <div id="placeselectValue" class="recordConby"  ng-click="ContactMode()">
+                <div id="contactchangeValue" ng-model="contModeModel" class="drop_down_text">
+                    Select
+                </div>
+                <div><img  class="downArrow" src="./images/down_arrow.png" style="position:fixed;margin-left:-14px;margin-top:1px;width: 12px;padding-top:4px; height: 15px;">
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+	<div class="row">
+		<div class="col col-50 left">{{nextActionDateTimeButton}}</div>
+	<div class="col col-50 right">
+		<div  style="position:relative;top:0px;z-index: 150;">
+		
+		<!-- <p class="divTime">Time</p> -->
+		</div>
+		
+		<div class="recordCalDiv" style="position: relative">
+		<input type="datetime-local"  id="calender_nextactiondate"  class="cal-imgnext"   ng-click="recordnextactioncalender()"   style="width: 120px; height: 20px;font-size:7pt;background-color:white;padding: 3px 0px 0px 2px;"/>
+<img class="cal-img" src="./images/calender.png" >
+ 		</div>
+		</div>
+		</div>
+	<div class="row">
+		<div class="col col-50 left">{{ptpAmount}}</div>
+		<div class="col col-50 right">
+            
+    <input class="cal-imgnext" style="display:none;" ng-focus="hidePtpHiddenInput()" ng-type="text" id="ptpHidden" >
+            
+   <input ng-show="ptpIos" class="cal-imgnext numberValidation" ng-blur="makeNumeric('ptpAmount')" type="number" id="ptpAmount" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" >
+   <input ng-show="ptpAndroid" class="cal-imgnext" type="tel" ng-blur="makeNumeric('ptpAmount1')" ng-keyup="numericOnly('ptpAmount1')" id="ptpAmount1"  >
+  </div>
+	</div>
+	
+	<div class="row">
+		<div class="col col-50 left">{{remark}}</div>
+		<div class="col col-50 right">
+			<input class="cal-imgnext"  type="text" ng-enter="closeKeypad()"  id="remark"  >
+		</div>
+	</div>
+	
+</div>
+
+<div style="height:32px">
+
+ <div class="attachCheckInImg" ng-click="chekIn()" >
+ <p>{{checkInButton}}</p>
+</div> 
+
+<div class="attachImg attachCheckInImg" ng-click="attachFile()">
+<p>{{attachFileButton}}</p>
+</div>
+
+</div>
+
+
+
+<ul id="addvalue">
+    
+  
+    
+</ul>
+
+
+
+<div class="addrType" style="height:30px;background-color: #47ad37; margin-left: 10px;margin-right: 10px" ng-click="addresstypeclick()" >
+<label class="advanceheaderview">{{addressType}}</label>
+<img src ="./images/dropdownwhite.png"  style="width: 17px; height: 10px;margin-left: 90%;margin-top: 11px;"/>
+</div>
+   <div>
+<ul class="addrTypeUl" style="background-color: white;margin-left: 10px;margin-right: 10px" ng-hide = "addressdropdownview">
+    <li ng-click="addressFunction(data,$event,$index)" ng-attr-id="addrTypeLi{{$index}}" class="advancels" style="border:1px solid lightgray!important;" ng-repeat="data in addressTypeList "  >
+
+     <p  style="color:gray;font-weight:bold;font-size:11px;float:left;margin-left: 5px;" ng-if="deviceLang=='vi'">{{data.value}}</p>
+     <p  style="color:gray;font-weight:bold;font-size:11px;float:left;margin-left: 5px;" ng-if="deviceLang!='vi'">{{data.address}}</p>
+     <p  style="margin-left:45%;"> {{data.custAddr}}&nbsp;</p></li>
+
+   </ul>
+
+</div>
+ <div class="distanceDiv">
+	 <div class="distanceText" >{{distance}} :</div>
+	 <div class="distanceInput" > <span  id="distance" ></span></div>
+ </div>
+ <center>  <button class="addrType" ng-click="save(2)" style="border:none;border-radius:5px;text-align: center; background-color: #008345 ;color:white; width:30%;height: 30px;margin-top: 5px; margin-bottom: 5px " >
+ {{saveButton}}</button> </center>
+ 
+<div class="addressPrompt" id="addrPromptPopUp">
+	<h4>{{unableFindAddr}}</h4>
+	<h6>{{addrPromptMsgOnline}}</h6>
+	<textarea  rows="4" class="tArea" id="addrTextArea" ></textarea>
+	<div class="btn">
+		<div class="btns" ng-click="onAddrPrompt(2)" >{{cancelButton}}</div>
+		<div class="btns" ng-click="onAddrPrompt(1)" >{{proceedBtn}}</div>
+		<div class="btns" ng-click="onAddrPrompt(3)" >{{searchBtn}}</div>
+	</div>
+</div>
+
+</ion-content>
+    
+</ion-view>

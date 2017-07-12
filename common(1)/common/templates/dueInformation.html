@@ -1,0 +1,81 @@
+<ion-view title="{{contDetailTitle}}" id="page2">
+    <ion-nav-bar class="bar-stable contNavBar" align-title="center">
+
+        <ion-nav-buttons side="left">
+            <img class="headerIconsLeft" src="img/back_button.png" ng-click="nextdetail(-1)" ng-hide="hidePreviousInDetail">
+            <!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">-->
+            <div class="iconSeprator" ng-hide="hidePreviousInDetail"></div>
+            <img class="headerIconsLeft headerIconsLeft2" src="img/next_button.png" ng-click="nextdetail(1)" ng-hide="hideNextInDetail">
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <img ng-click="closeContractModule()" class="headerIconsRight" src="img/cancel.png">
+            <figcaption ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }"  ng-click="closeContractModule()" class="contHeaderFigCaption"> {{cancelButton}}</figcaption>
+            <img ng-click="toggleContractSidePanel()" class="headerIconsRight headerIconsRight1" src="img/contract_menu.png">
+            <figcaption ng-click="toggleContractSidePanel()" class="contHeaderFigCaption">{{moreButton}}</figcaption>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <div id="contDetailSubHeader" class="bar bar-subheader bar-balanced" ng-model="indices">
+        <h2 class="title">{{dueInformation}}</h2>
+    </div>
+   
+    <ion-content padding="true" class="contractInfoCard" ng-model="index">
+        <div class="card" style="overflow:visible;">
+            <ion-list class="contractInfoItems">
+
+                 <div class = "row">
+                <div class = "col col-50 left">{{TOTAL_PAID_AMOUNT}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.totalPaidAmount}}</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-50 left">{{TOTAL_CHARGES_OVERDUE}}</div>
+                <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.totalChargesOverdue}}</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-50 left">{{LAST_PAYMENT_DATE}}</div>
+                 <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.lastPaymentDate}}</div>
+            </div>
+              <div class = "row">
+                <div class = "col col-50 left">{{LAST_PAYMENT_AMOUNT}}</div>
+                 <div class = "col col-50 right">{{contractList[localSelectedArray[index]].json.lastPaymentAmount}}</div>
+            </div>
+
+            </ion-list>
+            
+             
+        </div>
+        
+ 
+        
+  </ion-content>
+ 
+     <div  ng-class="{ 'nextLinkViatname': nextbuttonViet }" class="bar-subfooter bar-assertive nextLink">
+
+        {{nextButton}}
+    </div>
+    <ion-footer-bar align-title="left" class="bar-assertive footerTabBar" >
+        <div class="buttons">
+            <button class="button"><img class="bottomTabImages" src="img/print.png" />  
+              <figcaption>{{footerPR}}</figcaption>
+          </button>
+        </div>
+        <div class="buttons"  ng-click="goToRecordUpload(contractList[localSelectedArray[index]])">
+            <button class="button"><img class="bottomTabImages" src="img/upload.png" />
+            <figcaption> {{footerUR}} </figcaption>
+        </button>
+        </div>
+        <div class="buttons">
+            <button class="button"><img class="bottomTabImages" src="img/reposessions.png" />
+            <figcaption> {{footerRepos}}</figcaption>
+         </button>
+        </div>
+        <div class="buttons footerLastButton" ng-click="goToContTerm(contractList[localSelectedArray[index]])">
+            <button class="button"><img class="bottomTabImages" src="img/contract_termination.png" /> 
+            <figcaption> {{footerCT}}</figcaption>
+          </button>
+        </div>
+        
+      
+
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,192 @@
+/* Empty. Add your own CSS if you like */
+
+#login_button,#cancel_button {
+  min-height: 20px !important;
+  line-height: normal !important;
+  
+ } 
+
+
+#c_col,#ct_col,#map_col,#rep_col,#rec_col,#noti_col{
+padding: 0px;
+height:125px ;
+ border-bottom: 1px solid #999;
+} 
+
+
+#cont_row,#map_row,#rec_row{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom:0px !important;
+	
+}
+.row + .row {
+	margin:0px!important;
+}
+.lastrowborder{
+	border-bottom: none !important;
+}
+#cont_row{
+	
+	/* padding-top: 10px; */
+}
+
+#cont_vl,#map_vl,#rec_vl {
+    border-left: 1px solid gray;
+    padding: 0px;
+    
+}
+
+.bgimg {
+    background-image: url('../images/homelayout.png');
+    background-repeat:no-repeat; 
+    background-size:cover;
+    height:160px;
+    margin-bottom: 5px;
+    
+}
+
+#serchIcon{
+	padding: 0px;
+	margin: 0px;
+	color: green;
+	min-width: 0px !important;
+    width: 20% !important;
+	
+    
+}
+
+#searchText{
+	padding: 0px;
+	margin: 0px;
+	width: 50px !important;
+	text-area: 20px !important;
+}
+
+
+
+#searchButton{
+	width:93%;
+	border-radius: 5px;
+	height: 35px;
+	border:none;
+	box-shadow:0px 0px 5px #888888;
+	margin-left:10px;
+	margin-right:10px;
+	background-color:white;
+	text-align: center;
+}
+
+.icon.ion-record
+{
+  color: green !important;
+ 
+}
+
+.statusButon{
+	width: 25%;
+    border: none; 
+    float:right;
+    margin-right: 10px; 
+    z-index:99999; 
+    border-radius:3px;
+    padding: 2px;
+    margin-top:12px ;
+    position: relative;
+    background-color: white;
+}
+
+
+.statusButon:active {
+ transform: translateY(1px); opacity: 0.7;
+}
+
+
+
+
+.vetStatusButton{
+	width: 28%;
+    border: none; 
+    float:right;
+    margin-right: 10px; 
+    z-index:9999; 
+    border-radius:3px;
+    padding: 2px;
+    margin-top:12px ;
+    position: relative;
+    background-color: white;
+}
+
+/* #serchTextArea{
+	margin-left: 10px; 
+	margin-right: 10px;
+	padding-left: 35%;
+	border-radius: 5px;
+	height: 35px;
+} */
+.modes{
+width:25% ;float: right; background: transparent; margin-right: 10px; 
+ visibility:hidden; position: absolute;right:0;z-index:9999 ;padding-top: 35px
+}
+
+.vetnamModes{
+width:28% ;float: right; background: transparent; margin-right: 10px; 
+visibility:hidden; position: absolute;right:0;z-index:9999 ;padding-top: 35px
+}
+
+
+
+.vetStatusPadding{
+ margin-left: -10px;
+}
+
+.loginForm{
+	 overflow:auto ;
+	 padding-top:40px ;
+	 
+	padding-bottom:40px;
+	background-image: url('../images/login_page.png');
+    background-repeat:no-repeat; 
+    background-size:cover;
+    background-size: 100% 100%;
+  
+    
+}
+.loginFields{
+
+}
+.logoImageFE{
+	
+	width: 70%;  
+	height:53px;
+	 margin-top: 50px; 
+	 padding-bottom: 5px;
+}
+
+.homeIcons{
+	width: 64px ; height: 64px;
+}
+
+.content-area{
+	background-color:#ffffff;
+	/*  position:relative;
+	top:85px;  */
+}
+.drawerMenuButton{
+	/* for windows */	
+}
+.drawerMenuImage{
+	width: 20px;
+}
+
+.nextPreText{
+	 color: #008345 !important;
+}
+
+.OfflineButtonCss{
+width: 10px; 
+height: 10px;
+}
+
+

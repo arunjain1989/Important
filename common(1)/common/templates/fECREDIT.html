@@ -1,0 +1,60 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-dark navbar headTitle" align-title="center">
+           <!--  <ion-nav-back-button></ion-nav-back-button> -->
+            <ion-nav-buttons side="left">
+            
+   
+                <button class="button button-icon button-clear drawerMenuButton" menu-toggle="left"><img src="images/menu.png" alt="" class="drawerMenuImage"/>  </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+        <ion-header-bar class="bar-dark ">
+            <div class = "col col-center" style="margin-left: 15px;font-size: 18px">FE CREDIT</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-left has-header ">
+        
+        
+         
+        
+        
+   <ion-list id="fECREDIT-list1">
+
+        
+
+      <ion-item class="item-icon-left item col" id="fECREDIT-list-item14" ui-sref="fECREDIT.home" menu-close="">
+          <img src="img/home.png" class="menu_home icon "/>{{homeButton}}</ion-item>
+      <ion-item class="item-icon-left" id="fECREDIT-list-item15" ui-sref="fECREDIT.contract" menu-close="">
+         <img src="img/case.png" class="menu_home icon "/>{{contractTitle}}</ion-item>
+      <ion-item class="item-icon-left" id="fECREDIT-list-item16" ng-click="baseSearch()" menu-close="">
+          <img src="img/search.png" class="menu_home icon "/>{{searchBtn}}</ion-item>
+      <ion-item class="item-icon-left" id="fECREDIT-list-item17" ng-click = "recordListOpen()" menu-close="">
+          <img src="img/record.png" class="menu_home icon "/>{{recordButton}}</ion-item>
+      <ion-item class="item-icon-left"  id="fECREDIT-list-item18" ng-click="openEmptyMap()" ui-sref-opts="{reload: true, notify: true}" menu-close="">
+          <img src="img/map.png" class="menu_home icon "/>{{mapButton}}</ion-item>
+      <ion-item class="item-icon-left" id="fECREDIT-list-item19" ng-click="pTPCaseOpen()" menu-close="">
+          <img src="img/ptp.png" class="menu_home icon "/>{{ptpHeader}}</ion-item>
+      <ion-item class="item-icon-left" id="fECREDIT-list-item20" ng-click="paidCaseOpen()" menu-close="">
+          <img src="img/paid_cases.png" class="menu_home icon "/>{{paidCaseTitle}}</ion-item>
+      <ion-item class="item-icon-left" id="fECREDIT-list-item21" ng-click="unPaidCaseOpen()" menu-close="">
+          <img src="img/unpaid_cases.png" class="menu_home icon "/>{{unPaidCaseTitle}}</ion-item>
+      <!-- <ion-item class="item-icon-left" id="fECREDIT-list-item22" ui-sref="fECREDIT.printReciept" menu-close="">
+          <img src="img/print_receipt.png" class="menu_home icon "/>{{footerPR}}</ion-item>
+          <ion-item class="item-icon-left" id="fECREDIT-list-item24" ui-sref="#" menu-close="">
+          <img src="images/receipt_management.png" class="menu_home icon "/>{{recieptManagemHeader}}</ion-item>
+   -->
+  		  <ion-item class="item-icon-left" id="sync"   ng-click = "sync()" menu-close="">
+          <img src="img/synchronization.png" class="menu_home icon "/>{{syncronizationTitle}}</ion-item>
+          
+          <ion-item class="item-icon-left"    ui-sref="fECREDIT.notification" menu-close="">
+          <img src="img/inbox_icon.png" class="inboxIcon icon "/>{{inboxTitle}}</ion-item>
+          
+          
+  </ion-list>
+
+
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,73 @@
+<ion-view title="{{draftRecordButton}}" id="page65">
+    
+     <ion-nav-bar class="bar-stable contNavBar"  align-title="center">
+        
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+<!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">-->
+               <!--  <div class="iconSeprator"></div> -->
+                  <img class="headerIconsLeft headerIconsLeft2"  ui-sref="fECREDIT.recordUpload"  src="img/back_button.png">
+            </ion-nav-buttons>
+         <ion-nav-buttons side="right">
+                  <img   class="headerIconsRight" ng-click="closeContractModule()" src="img/cancel.png">
+             <figcaption ng-class="{ 'contHeaderFigCaptionViet': cnclButtonViet }"   class="contHeaderFigCaption">{{cancelButton}}</figcaption>
+               
+            </ion-nav-buttons>
+        </ion-nav-bar>
+     
+     <ion-content  scroll="false"  class="has-header">
+    <form id="paidSearchbox" class="list" ng-click="recordSearchcontract()">
+            <!-- <label class="item item-input" style="margin-top:5px;margin-left:5px;margin-right:5px;border-radius: 8px;height:40px "">
+                <i class="icon ion-search placeholder-icon"><img alt="filter" src="./images/filter.png" style="float: right!important;width: 20px;height: 20px;position: fixed;size: initial;margin-left: 80%;"></i>
+                <input disabled type="search" placeholder="Search">
+            </label> -->
+            
+            
+            <div id="recordColumnHeader" style="margin-top:3px;margin-left:4px;margin-right:4px" class="bar bar-subheader bar-balanced">
+	         <div style="width:28%" class = "recordheaderBarCols">{{contactedPerson}} </div>
+             <div style="width:38%" class = "recordheaderBarCols">{{contractId}}</div>
+             <div style="width:34%" class = "recordheaderBarCols">{{contactDateButton}} </div>
+             <!-- <div style="width:17%" class = "recordheaderBarCols">Direction</div> -->
+                
+	    </div>  
+        </form>
+        
+       
+        
+    </ion-content>
+   <!--  <ion-content  padding="true" class="listOfContracts" style="margin-top:-5%!important">
+        <div  class="card">
+            <ion-checkbox  class="checkbox-square contractCheckBox">Customer ID </ion-checkbox>
+            <ion-list class="contractList">
+                <ion-item class="item"> Customer Full Name  </ion-item>
+                <ion-item class="item"> Customer Contact ID   </ion-item>
+                <ion-item class="item"> Assignee </ion-item>
+                <ion-item class="item"> Date Assigned </ion-item>
+               
+            </ion-list>           
+        </div>
+           <button class="button"  style="background-color: #008345;margin:auto;color:#ffffff;
+  display:block;width:150px;height:15px;margin-bottom:5px">See Details</button>  
+         
+
+    </ion-content> -->
+    
+     <ion-content has-bouncing="false" style="margin-top:55px;">
+     
+   		 <div class="recordRows" class="bar bar-subheader bar-balanced" ng-repeat="record in recordsList" data-ng-click="selectedRecordDraftElem(record)">
+	         <div style="width:32%" class = "recordListCols" >{{record.json.personContacted}} </div>
+             <div style="width:35%" class = "recordListCols">{{record.json.contractId}}</div>
+             <div style="width:33%" class = "recordListCols">{{record.json.actionDateDiv}} </div>
+             <!-- <div style="width:17%" class = "recordListCols"> -->
+             <!-- <img class="recorddirAndAttachImages" src="img/direction.png" /> -->
+             <!-- </div>  -->   
+	    </div>
+	     
+	     
+	    
+	 
+	    </ion-content>
+    
+    
+    
+</ion-view>

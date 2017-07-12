@@ -1,0 +1,134 @@
+<ion-view title="Receipt Management" id="page7">
+
+        
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear drawerMenuButton" menu-toggle="left">
+                	<img src="images/menu.png" alt="" class="drawerMenuImage"/> 
+                </button>
+<!--                <img class="headerIconsLeft menuIcon" src="img/menu.png">-->
+                <div class="iconSeprator"></div>
+                  <img class="headerIconsLeft headerIconsLeft2"  src="./images/back_button.png">
+            </ion-nav-buttons>
+         <ion-nav-buttons side="right">
+                
+                <figcaption  class="contHeaderFigCaption"  ng-click="closeContractModule()" >Cancel</figcaption>
+                 <img   class="headerIconsRight" ng-click="closeContractModule()" src="img/cancel.png">
+               
+            </ion-nav-buttons>
+       
+
+ <ion-content padding="true"  scroll="false"
+	class="has-header" >
+<form id="paidSearchbox" class="list"  >
+            <label class="item item-input" style="border-radius: 8px;height:40px ">
+                <i class="icon ion-search placeholder-icon" style="margin-top:2px"></i>
+                <input type="search" placeholder="Contract ID" >
+            </label>
+        
+
+
+
+
+        <div style="float: left;margin-top:3%">
+		
+		<div   > <input type="text" id="startdatefield"
+			style="width: 80px; height: 25px; border: 5px solid green; border-width: 1px; float:left"
+			placeholder="      /    /" name="datepicker"><span id="startdatepicker" onclick="startdatepicker();"style="float:left;"><img  src="./images/calender.png" style="width: 25px; height: 25px;align:center"></span>&nbsp;&nbsp;<span>From-</span><span>To</span></div>
+		
+	</div>
+<div style="margin-top:3%" > <input type="text" id="enddatefield"
+			style="width: 80px; height: 25px;margin-left:7px; border: 5px solid green; border-width: 1px; float:left"
+			placeholder="      /    /" name="datepicker"><span id="enddatepicker" onclick="enddatepicker();"style="float:left;"><img  src="./images/calender.png" style="width: 25px; height: 25px;align:center"></span></div>
+		
+	
+
+
+	
+            
+	 <div style="float: right;">
+                 <img class="printhistoryrIconsRight"   src="./images/history.png">
+                <figcaption  class="printhistoryrFigCaption">History</figcaption>
+          </div>
+
+	
+	
+		
+
+	
+</form>
+
+
+</ion-content> 
+
+<ion-content  padding="true" scroll="false"  style="margin-top:20%;">
+        <div  class="card" >
+            <ion-list class="contractInfoItems">
+
+            <div class = "row">
+                <div class = "col col-60 left">E-Series
+				number</div>
+                <div class = "col col-80 right">FE1309</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-60 left">Contract
+				ID</div>
+                <div class = "col col-80 right">fsfsffs</div>
+            </div>
+            <div class = "row">
+                <div class = "col col-60 left">Date
+				Issued</div>
+                 <div class = "col col-80 right">d1wrwr23456</div>
+            </div>
+              <div class = "row">
+                <div class = "col col-60 left">Attach
+				Cash deposit</div>
+                 <div class = "col col-80 right"><img class="dirAndAttachImages" ng-click="attachCash()" src="./images/attachment_icon.png" /></div>
+				
+				
+            </div>
+              <div class = "row">
+                <div class = "col col-60 left">Cancel
+				Receipt</div>
+				
+                <div class = "col col-60 right">
+                <img class="printdirAndAttachImages" id="attachcash" src="./images/yes.png" />
+              
+				<span style="padding-bottom:5px">Yes</span>
+                <img class="printdirAndAttachImages" id="attachcash" src="./images/no.png" />
+              <span style="margin-bottom:5px">no</span>
+                </div>
+              </div>
+             
+              <button class="button"  style="background-color: #008345;margin:auto;color:#ffffff;
+  display:block;width:100px;height:15px;margin-bottom:5px">Save</button>
+           
+            </ion-list>           
+        </div>
+        <div>
+		  <ul id="select-demo">
+		    
+		  </ul>
+		</div>
+
+    </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-view>
